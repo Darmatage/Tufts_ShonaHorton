@@ -1448,7 +1448,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8777265428218430819, guid: ddaedd2d82ce54ee1adc592a55efc662, type: 3}
       propertyPath: m_Text
-      value: 
+      value: 'Character 3 Speech
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8777265428281143624, guid: ddaedd2d82ce54ee1adc592a55efc662, type: 3}
       propertyPath: m_Pivot.x
@@ -1540,7 +1542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777265429186327320, guid: ddaedd2d82ce54ee1adc592a55efc662, type: 3}
       propertyPath: m_Text
-      value: 
+      value: Character 3
       objectReference: {fileID: 0}
     - target: {fileID: 8777265429186327320, guid: ddaedd2d82ce54ee1adc592a55efc662, type: 3}
       propertyPath: m_Enabled

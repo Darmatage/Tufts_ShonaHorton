@@ -64,6 +64,8 @@ public void Next(){
                 Char1speech.text = "Felix! Felix! Guess what?!";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt ==3){
                 ArtChar1a.SetActive(false);
@@ -72,6 +74,8 @@ public void Next(){
                 Char1speech.text = "";
                 Char2name.text = "Felix";
                 Char2speech.text = "Oh geez, what do you want? I’ve already seen you chase your tail three times today, it’s gotten pretty old.";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt == 4){
                 ArtChar1a.SetActive(true);
@@ -80,6 +84,8 @@ public void Next(){
                 Char1speech.text = "No not that! Our guardian and I are going to the dog park!";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt == 5){
                 ArtChar1a.SetActive(false);
@@ -88,6 +94,8 @@ public void Next(){
                 Char1speech.text = "";
                 Char2name.text = "Felix";
                 Char2speech.text = "And so it begins. Do you think you’ll actually make it to the park this time?";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt == 6){
                 ArtChar1a.SetActive(true);
@@ -96,6 +104,8 @@ public void Next(){
                 Char1speech.text = "Huh? What are you talking about?";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt ==7){
                 ArtChar1a.SetActive(false);
@@ -104,6 +114,8 @@ public void Next(){
                 Char1speech.text = "";
                 Char2name.text = "Felix";
                 Char2speech.text = "Almost every time you try to go to the park, something happens that freaks our poor guardian out and you come home early.";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt == 8){
                 ArtChar1a.SetActive(true);
@@ -112,6 +124,8 @@ public void Next(){
                 Char1speech.text = "What? That’s not true!";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
         else if (primeInt == 9){
                 ArtChar1a.SetActive(false);
@@ -120,6 +134,8 @@ public void Next(){
                 Char1speech.text = "";
                 Char2name.text = "Felix";
                 Char2speech.text = "Oh it’s true, you haven’t been to the park in a week and a half. I know because that was the last time I got any peace in this house.";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
         else if (primeInt == 10){
                 ArtChar1a.SetActive(true);
@@ -128,6 +144,8 @@ public void Next(){
                 Char1speech.text = "Oh… I guess you’re right. But today I’m gonna make it to the park! Nothing will get in my way!";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
         else if (primeInt == 11){
                 ArtChar1a.SetActive(false);
@@ -136,6 +154,8 @@ public void Next(){
                 Char1speech.text = "";
                 Char2name.text = "Felix";
                 Char2speech.text = "Boy I hope so, I could really use the peace and quiet.";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
         else if (primeInt == 12){
                 ArtChar1a.SetActive(true);
@@ -144,6 +164,8 @@ public void Next(){
                 Char1speech.text = "Wait do you smell that… it smells like… a used paper towel!! I see it, it’s on the floor in the kitchen!";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
         else if (primeInt == 13){
                 ArtChar1a.SetActive(false);
@@ -153,6 +175,8 @@ public void Next(){
                 Char1speech.text = "";
                 Char2name.text = "Felix";
                 Char2speech.text = "You’re going to eat it, aren’t you?";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
         else if (primeInt == 14){
                 ArtChar1a.SetActive(true);
@@ -169,6 +193,8 @@ public void Next(){
                 Char1speech.text = "";
                 Char2name.text = "Felix";
                 Char2speech.text = "I’ll never understand why you do that.";
+                Char3name.text = "";
+                Char3speech.text = "";
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
