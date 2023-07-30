@@ -27,10 +27,8 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject Choice2b;
         public GameObject Harness1;
         public GameObject Harness2;
-        public GameObject NextScene1Button;
-        public GameObject NextScene2Button;
         public GameObject nextButton;
-        public GameObject menuButton;
+        public GameObject nextScene;
        //public AudioSource audioSource;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -46,10 +44,8 @@ void Start(){
         Choice2b.SetActive(false);
         Harness1.SetActive(false);
         Harness2.SetActive(false);
-        NextScene1Button.SetActive(false);
-        NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-        menuButton.SetActive(false);
+        nextScene.SetActive(false);
    }
 
 
@@ -175,8 +171,7 @@ public void Next(){
                 Char2speech.text = "I’ll never understand why you do that.";
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
-                //Choice1a.SetActive(true);
-                NextScene1Button.SetActive(true); // function Choice1aFunct()
+                Choice1a.SetActive(true); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
         }
         
@@ -209,7 +204,61 @@ public void Next(){
                 Char2speech.text = "Whichever one gets you out of the house faster.";
                 Choice2a.SetActive(true);
                 Choice2b.SetActive(true);
+                nextButton.SetActive(false);
         }
+        else if (primeInt == 30){
+                ArtChar1b.SetActive(false);
+                Char1name = "";
+                Char1speech = "";
+                ArtChar3.SetActive(true);
+                Char3name = "Guardian";
+                Char3speech = "Oh! Can’t forget your toy.";
+        }
+        else if (primeInt == 31){
+                ArtChar1b.SetActive(true);
+                ArtChar3.SetActive(false);
+                Char1name = "YOU";
+                Char1speech = "Alright Felix, we’re off to the park!";
+                Char3name = "";
+                Char3speech = "";
+        }
+        else if (primeInt == 32){
+                ArtChar1b .SetActive(false);
+                ArtChar2a.SetActive(true);
+                Char1name = "";
+                Char1speech = "";
+                Char2name = "Felix";
+                Char2speech = "Thank goodness, now I can finally nap.";
+                nextButton.SetActive(false);
+                nextScene.SetActive(true);
+        }
+        else if (primeInt == 40){
+                ArtChar1c.SetActive(false);
+                Char1name = "";
+                Char1speech = "";
+                ArtChar3.SetActive(true);
+                Char3name = "Guardian";
+                Char3speech = "Oh! Can’t forget your toy.";
+        }
+        else if (primeInt == 41){
+                ArtChar1c.SetActive(true);
+                ArtChar3.SetActive(false);
+                Char1name = "YOU";
+                Char1speech = "Alright Felix, we’re off to the park!";
+                Char3name = "";
+                Char3speech = "";
+        }
+        else if (primeInt == 42){
+                ArtChar1c .SetActive(false);
+                ArtChar2a.SetActive(true);
+                Char1name = "";
+                Char1speech = "";
+                Char2name = "Felix";
+                Char2speech = "Thank goodness, now I can finally nap.";
+                nextButton.SetActive(false);
+                nextScene.SetActive(true);
+        }
+
 
 
       //Please do NOT delete this final bracket that ends the Next() function:
@@ -220,7 +269,6 @@ public void Next(){
         public void Choice1bFunct(){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
-                NextScene1Button.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "Oh yuck it was used to clean ketchup! I hate ketchup.";
                 Char2name.text = "";
@@ -232,8 +280,32 @@ public void Next(){
         }
 
         public void Choice2aFunct(){
+                gameHandler.harnessColor = 0;
                 ArtChar1a.SetActive(false);
                 ArtChar1b.SetActive(true);
+                ArtChar2a.SetActive(false);
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char1name = "YOU";
+                Char1speech = "Lookin’ pretty good if I do say so myself!"
+                primeInt = 29;
+                Choice2a.SetActive(false);
+                Choice2b.SetActive(false);
+                nextButton.SetActive(true);
+        }
+        public void Choice2bFunct(){
+                gameHandler.harnessColor = 1;
+                ArtChar1a.SetActive(false);
+                ArtChar1c.SetActive(true);
+                ArtChar2a.SetActive(false);
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char1name = "YOU";
+                Char1speech = "Lookin’ pretty good if I do say so myself!"
+                primeInt = 39;
+                Choice2a.SetActive(false);
+                Choice2b.SetActive(false);
+                nextButton.SetActive(true);
         }
 
 
