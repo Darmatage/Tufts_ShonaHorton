@@ -197,6 +197,7 @@ public void Next(){
         }
         else if (primeInt == 22){
                 ArtChar1a.SetActive(false);
+                ArtChar2b.SetActive(false);
                 ArtChar2a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -208,55 +209,55 @@ public void Next(){
         }
         else if (primeInt == 30){
                 ArtChar1b.SetActive(false);
-                Char1name = "";
-                Char1speech = "";
+                Char1name.text = "";
+                Char1speech.text = "";
                 ArtChar3.SetActive(true);
-                Char3name = "Guardian";
-                Char3speech = "Oh! Can’t forget your toy.";
+                Char3name.text = "Guardian";
+                Char3speech.text = "Oh! Can’t forget your toy.";
         }
         else if (primeInt == 31){
                 ArtChar1b.SetActive(true);
                 ArtChar3.SetActive(false);
-                Char1name = "YOU";
-                Char1speech = "Alright Felix, we’re off to the park!";
-                Char3name = "";
-                Char3speech = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "Alright Felix, we’re off to the park!";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
         else if (primeInt == 32){
                 ArtChar1b .SetActive(false);
                 ArtChar2a.SetActive(true);
-                Char1name = "";
-                Char1speech = "";
-                Char2name = "Felix";
-                Char2speech = "Thank goodness, now I can finally nap.";
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Felix";
+                Char2speech.text = "Thank goodness, now I can finally nap.";
                 nextButton.SetActive(false);
-                nextScene.SetActive(true);
+                //nextScene.SetActive(true);
         }
         else if (primeInt == 40){
                 ArtChar1c.SetActive(false);
-                Char1name = "";
-                Char1speech = "";
+                Char1name.text = "";
+                Char1speech.text = "";
                 ArtChar3.SetActive(true);
-                Char3name = "Guardian";
-                Char3speech = "Oh! Can’t forget your toy.";
+                Char3name.text = "Guardian";
+                Char3speech.text = "Oh! Can’t forget your toy.";
         }
         else if (primeInt == 41){
                 ArtChar1c.SetActive(true);
                 ArtChar3.SetActive(false);
-                Char1name = "YOU";
-                Char1speech = "Alright Felix, we’re off to the park!";
-                Char3name = "";
-                Char3speech = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "Alright Felix, we’re off to the park!";
+                Char3name.text = "";
+                Char3speech.text = "";
         }
         else if (primeInt == 42){
-                ArtChar1c .SetActive(false);
+                ArtChar1c.SetActive(false);
                 ArtChar2a.SetActive(true);
-                Char1name = "";
-                Char1speech = "";
-                Char2name = "Felix";
-                Char2speech = "Thank goodness, now I can finally nap.";
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Felix";
+                Char2speech.text = "Thank goodness, now I can finally nap.";
                 nextButton.SetActive(false);
-                nextScene.SetActive(true);
+                //nextScene.SetActive(true);
         }
 
 
@@ -280,28 +281,28 @@ public void Next(){
         }
 
         public void Choice2aFunct(){
-                gameHandler.harnessColor = 0;
+                GameHandler.harnessColor = 0;
                 ArtChar1a.SetActive(false);
                 ArtChar1b.SetActive(true);
                 ArtChar2a.SetActive(false);
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char1name = "YOU";
-                Char1speech = "Lookin’ pretty good if I do say so myself!"
+                Char1name.text = "YOU";
+                Char1speech.text = "Lookin’ pretty good if I do say so myself!";
                 primeInt = 29;
                 Choice2a.SetActive(false);
                 Choice2b.SetActive(false);
                 nextButton.SetActive(true);
         }
         public void Choice2bFunct(){
-                gameHandler.harnessColor = 1;
+                GameHandler.harnessColor = 1;
                 ArtChar1a.SetActive(false);
                 ArtChar1c.SetActive(true);
                 ArtChar2a.SetActive(false);
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char1name = "YOU";
-                Char1speech = "Lookin’ pretty good if I do say so myself!"
+                Char1name.text = "YOU";
+                Char1speech.text = "Lookin’ pretty good if I do say so myself!";
                 primeInt = 39;
                 Choice2a.SetActive(false);
                 Choice2b.SetActive(false);
