@@ -44,8 +44,8 @@ void Start(){
         Choice2b.SetActive(false);
         Harness1.SetActive(false);
         Harness2.SetActive(false);
-        nextButton.SetActive(true);
         nextScene.SetActive(false);
+        nextButton.SetActive(true);
    }
 
 
