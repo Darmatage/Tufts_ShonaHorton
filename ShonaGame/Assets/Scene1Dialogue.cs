@@ -25,8 +25,8 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject Choice1b;
         public GameObject Choice2a;
         public GameObject Choice2b;
-        public GameObject Harness1;
-        public GameObject Harness2;
+        public GameObject Collar1;
+        public GameObject Collar2;
         public GameObject nextButton;
         public GameObject nextScene;
        //public AudioSource audioSource;
@@ -35,15 +35,18 @@ public class Scene1Dialogue : MonoBehaviour {
 void Start(){  
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(false);
         ArtChar2a.SetActive(false);
         ArtChar2b.SetActive(false);
+        ArtChar3.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
-        Harness1.SetActive(false);
-        Harness2.SetActive(false);
+        Collar1.SetActive(false);
+        Collar2.SetActive(false);
         nextScene.SetActive(false);
         nextButton.SetActive(true);
    }
@@ -185,13 +188,13 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char3name.text = "Guardian";
-                Char3speech.text = "OK, [dog]! What color harness do you want to wear today?";
+                Char3speech.text = "OK, [dog]! What color collar do you want to wear today?";
         }
        else if (primeInt == 21){
                 ArtChar1a.SetActive(true);
                 ArtChar3.SetActive(false);
                 Char1name.text = "YOU";
-                Char1speech.text = "Ooh! Felix, what color harness should I choose?";
+                Char1speech.text = "Ooh! Felix, what color collar should I choose?";
                 Char3name.text = "";
                 Char3speech.text = "";
         }
@@ -203,8 +206,13 @@ public void Next(){
                 Char1speech.text = "";
                 Char2name.text = "Felix";
                 Char2speech.text = "Whichever one gets you out of the house faster.";
+        }
+        else if (primeInt == 23){
+                ArtChar2a.SetActive(false);
                 Choice2a.SetActive(true);
                 Choice2b.SetActive(true);
+                Collar1.SetActive(true);
+                Collar2.SetActive(true);
                 nextButton.SetActive(false);
         }
         else if (primeInt == 30){
@@ -257,7 +265,7 @@ public void Next(){
                 Char2name.text = "Felix";
                 Char2speech.text = "Thank goodness, now I can finally nap.";
                 nextButton.SetActive(false);
-                //nextScene.SetActive(true);
+                nextScene.SetActive(true);
         }
 
 
@@ -269,7 +277,7 @@ public void Next(){
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
         public void Choice1bFunct(){
                 ArtChar1a.SetActive(true);
-                ArtChar2a.SetActive(false);
+                ArtChar2b.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "Oh yuck it was used to clean ketchup! I hate ketchup.";
                 Char2name.text = "";
@@ -281,10 +289,12 @@ public void Next(){
         }
 
         public void Choice2aFunct(){
-                GameHandler.harnessColor = 0;
+                GameHandler.collarColor = 0;
                 ArtChar1a.SetActive(false);
                 ArtChar1b.SetActive(true);
                 ArtChar2a.SetActive(false);
+                Collar1.SetActive(false);
+                Collar2.SetActive(false);
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char1name.text = "YOU";
@@ -295,10 +305,12 @@ public void Next(){
                 nextButton.SetActive(true);
         }
         public void Choice2bFunct(){
-                GameHandler.harnessColor = 1;
+                GameHandler.collarColor = 1;
                 ArtChar1a.SetActive(false);
                 ArtChar1c.SetActive(true);
                 ArtChar2a.SetActive(false);
+                Collar1.SetActive(false);
+                Collar2.SetActive(false);
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char1name.text = "YOU";

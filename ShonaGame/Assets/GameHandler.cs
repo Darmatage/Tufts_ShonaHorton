@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour{
 
-        public static int harnessColor;
+        public static int collarColor;
         // public GameObject textGameObject;
 
         // void Start () { UpdateScore (); }
