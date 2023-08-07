@@ -42,7 +42,7 @@ public class Scene1bDialogue : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Next()
+    public void Next()
     {
         primeInt = primeInt + 1;
         if (primeInt == 1){
@@ -154,10 +154,13 @@ public class Scene1bDialogue : MonoBehaviour
         }
     }
     public void Choice1aFunct(){
-        Char3speech.text = "Good dog, [Dog]."
+        Char3speech.text = "Good dog, [Dog].";
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         primeInt = 15;
         nextButton.SetActive(true);
+    }
+    public void Choice1bFunct(){
+
     }
 }
