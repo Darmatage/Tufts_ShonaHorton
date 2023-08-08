@@ -239,7 +239,7 @@ public void Next(){
                 Char2name.text = "Felix";
                 Char2speech.text = "Thank goodness, now I can finally nap.";
                 nextButton.SetActive(false);
-                //nextScene.SetActive(true);
+                nextScene.SetActive(true);
         }
         else if (primeInt == 40){
                 ArtChar1c.SetActive(false);
@@ -289,7 +289,6 @@ public void Next(){
         }
 
         public void Choice2aFunct(){
-                GameHandler.collarColor = 0;
                 ArtChar1a.SetActive(false);
                 ArtChar1b.SetActive(true);
                 ArtChar2a.SetActive(false);
@@ -326,6 +325,6 @@ public void Next(){
                SceneManager.LoadScene("Scene1b");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene1c");
+                SceneManager.LoadScene("Scene2");
         }
 }

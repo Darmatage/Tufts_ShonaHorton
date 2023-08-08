@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour{
 
-        public static int collarColor;
+        public static int collarColor = 0;
+        public static bool ateTowel = false;
+        public static float patience = 4;
         // public GameObject textGameObject;
 
         // void Start () { UpdateScore (); }
