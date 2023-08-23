@@ -208,7 +208,7 @@ public class Scene1bDialogue : MonoBehaviour
         nextButton.SetActive(true);
     }
     public void Choice1bFunct(){
-        GameHandler.ateTowel = true;
+        GameHandler.ateTowel = 1;
         GameHandler.patience -= 1;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
