@@ -295,6 +295,88 @@ public class Scene2Dialogue : MonoBehaviour
             Choice2a.SetActive(true);
             Choice2b.SetActive(true);
         }
+        else if (primeInt == 66){
+            Char4speech.text = "But uh....";
+        }
+        else if (primeInt == 67){
+            Char4speech.text = "I pooped in the hallway of my mom’s apartment so we had to move…";
+        }
+        else if (primeInt == 68){
+            ArtChar4a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Oh! Hey look, accidents happen, when you gotta go you gotta go! You can’t dwell on it, you gotta move on.";
+            Char4name.text = "";
+            Char4speech.text = "";
+        }
+        else if (primeInt == 69){
+            ArtChar1.SetActive(false);
+            ArtChar4a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char4name.text = "New Dog";
+            Char4speech.text = "Oh wow! I’ve never thought about it like that! That does make me feel a little better, thank you! Oh, I’m Ollie by the way.";
+        }
+        else if (primeInt == 70){
+            ArtChar4a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "No problem! I’m [dog]. Welcome to the neighborhood, Ollie!";
+            Char4name.text = "";
+            Char4speech.text = "";
+        }
+        else if (primeInt == 71){
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char4name.text = "Ollie";
+            Char4speech.text = "Thanks! Hope to see you again soon!";
+            nextButton.SetActive(false);
+            if (GameHandler.ateTowel == 0){
+                nextScene1.SetActive(true);
+            }
+            else{
+                nextScene2.SetActive(true);
+            }
+        }
+        else if (primeInt == 81){
+            ArtChar3b.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Sorry I just don’t like them! Their story was suspicious…";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 82){
+            ArtChar1.SetActive(false);
+            ArtChar3b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "You’re normally so friendly!";
+        }
+        else if (primeInt == 83){
+            ArtChar1.SetActive(true);
+            ArtChar3b.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "They were acting weird!";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 84){
+            ArtChar1.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Ugh… let’s just try to get to the park.";
+            nextButton.SetActive(false);
+            if (GameHandler.ateTowel == 0){
+                nextScene1.SetActive(true);
+            }
+            else{
+                nextScene2.SetActive(true);
+            }
+        }
     }
     public void Choice1aFunct(){
         GameHandler.patience -= 0.5;
@@ -318,9 +400,35 @@ public class Scene2Dialogue : MonoBehaviour
     }
     public void Choice2aFunct(){
         ArtChar1.SetActive(false);
+        ArtChar4a.SetActive(true);
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char4name.text = "New Dog";
+        Char4speech.text = "Sorry, sorry. I didn’t mean to be so aggressive, it’s still a sensitive subject. I’m a little embarrassed…";
+        GameHandler.nice = 1;
+        primeInt = 65;
+        nextButton.SetActive(true);
     }
 
     public void Choice2bFunct(){
         ArtChar1.SetActive(false);
+        ArtChar3b.SetActive(true);
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char3name.text = "Guardian";
+        Char3speech.text = "No [dog]! What is with you today?";
+        GameHandler.patience -= 1;
+        primeInt = 80;
+        nextButton.SetActive(true);
+    }
+    public void SceneChange1(){
+        SceneManager.LoadScene("Scene3a");
+    }
+    public void SceneChange2(){
+        SceneManager.LoadScene("Scene3b");
     }
 }
