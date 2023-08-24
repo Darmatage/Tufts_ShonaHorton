@@ -213,6 +213,7 @@ public void Next(){
                 Choice2b.SetActive(true);
                 Collar1.SetActive(true);
                 Collar2.SetActive(true);
+                DialogueDisplay.SetActive(false);
                 nextButton.SetActive(false);
         }
         else if (primeInt == 30){
@@ -289,6 +290,7 @@ public void Next(){
         }
 
         public void Choice2aFunct(){
+                DialogueDisplay.SetActive(true);
                 ArtChar1a.SetActive(false);
                 ArtChar1b.SetActive(true);
                 ArtChar2a.SetActive(false);
@@ -304,6 +306,7 @@ public void Next(){
                 nextButton.SetActive(true);
         }
         public void Choice2bFunct(){
+                DialogueDisplay.SetActive(true);
                 GameHandler.collarColor = 1;
                 ArtChar1a.SetActive(false);
                 ArtChar1c.SetActive(true);
