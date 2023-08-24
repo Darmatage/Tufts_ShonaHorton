@@ -8,33 +8,33 @@ using UnityEngine.Audio;
 public class Scene2Dialogue : MonoBehaviour
 {
     public int primeInt = 1;         // This integer drives game progress!
-        public Text Char1name;
-        public Text Char1speech;
-        public Text Char2name;
-        public Text Char2speech;
-        public Text Char3name;
-        public Text Char3speech;
-        public Text Char4name;
-        public Text Char4speech;
-        public GameObject DialogueDisplay;
-        GameObject ArtChar1;
-        public GameObject ArtChar1a;
-        public GameObject ArtChar1b;
-        public GameObject ArtChar1c;
-        public GameObject ArtChar2a;
-        public GameObject ArtChar2b;
-        public GameObject ArtChar3a;
-        public GameObject ArtChar3b;
-        public GameObject ArtChar4a;
-        public GameObject ArtChar4b;
-        public GameObject ArtBG1;
-        public GameObject Choice1a;
-        public GameObject Choice1b;
-        public GameObject Choice2a;
-        public GameObject Choice2b;
-        public GameObject nextButton;
-        public GameObject nextScene1;
-        public GameObject nextScene2;
+    public Text Char1name;
+    public Text Char1speech;
+    public Text Char2name;
+    public Text Char2speech;
+    public Text Char3name;
+    public Text Char3speech;
+    public Text Char4name;
+    public Text Char4speech;
+    public GameObject DialogueDisplay;
+    GameObject ArtChar1;
+    public GameObject ArtChar1a;
+    public GameObject ArtChar1b;
+    public GameObject ArtChar1c;
+    public GameObject ArtChar2a;
+    public GameObject ArtChar2b;
+    public GameObject ArtChar3a;
+    public GameObject ArtChar3b;
+    public GameObject ArtChar4a;
+    public GameObject ArtChar4b;
+    public GameObject ArtBG1;
+    public GameObject Choice1a;
+    public GameObject Choice1b;
+    public GameObject Choice2a;
+    public GameObject Choice2b;
+    public GameObject nextButton;
+    public GameObject nextScene1;
+    public GameObject nextScene2;
     // Start is called before the first frame update
     void Start()
     {
