@@ -18,9 +18,13 @@ public class Scene2Dialogue : MonoBehaviour
     public Text Char4speech;
     public GameObject DialogueDisplay;
     GameObject ArtChar1;
+    GameObject ArtChar1Lose;
     public GameObject ArtChar1a;
     public GameObject ArtChar1b;
     public GameObject ArtChar1c;
+    public GameObject ArtCharLose1a;
+    public GameObject ArtCharLose1b;
+    public GameObject ArtCharLose1c;
     public GameObject ArtChar2a;
     public GameObject ArtChar2b;
     public GameObject ArtChar3a;
@@ -42,6 +46,9 @@ public class Scene2Dialogue : MonoBehaviour
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
         ArtChar1c.SetActive(false);
+        ArtCharLose1a.SetActive(false);
+        ArtCharLose1b.SetActive(false);
+        ArtCharLose1c.SetActive(false);
         ArtChar2a.SetActive(false);
         ArtChar2b.SetActive(false);
         ArtChar3a.SetActive(false);
@@ -66,7 +73,19 @@ public class Scene2Dialogue : MonoBehaviour
         else{
             ArtChar1 = ArtChar1b;
         }
+        if (GameHandler.collarColor == 0){
+            if (GameHandler.ateTowel == 0){
+                ArtChar1Lose = ArtCharLose1a;
+            }
+            else{
+                ArtChar1 = ArtCharLose1c;
+            }
+        }
+        else{
+            ArtChar1 = ArtCharLose1b;
+        }
         ArtChar1.SetActive(false);
+        ArtChar1Lose.SetActive(false);
         nextButton.SetActive(true);
     }
 
@@ -141,7 +160,7 @@ public class Scene2Dialogue : MonoBehaviour
         }
         else if (primeInt == 13){
             ArtChar3b.SetActive(false);
-            ArtChar1.SetActive(true);
+            ArtChar1Lose.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "Oops…";
             Char2name.text = "";
@@ -150,7 +169,7 @@ public class Scene2Dialogue : MonoBehaviour
             Char3speech.text = "";
         }
         else if (primeInt == 14){
-            ArtChar1.SetActive(false);
+            ArtChar1Lose.SetActive(false);
             ArtChar2a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
@@ -166,7 +185,7 @@ public class Scene2Dialogue : MonoBehaviour
             Char3speech.text = "Let’s go, and leave that squirrel alone!";
         }
         else if (primeInt == 16){
-            ArtChar1.SetActive(true);
+            ArtChar1Lose.SetActive(true);
             ArtChar3a.SetActive(false);
             Char1name.text = "YOU";
             Char1speech.text = "Frank is the one who needs to leave me alone!";
@@ -174,7 +193,7 @@ public class Scene2Dialogue : MonoBehaviour
             Char3speech.text = "";
         }
         else if (primeInt == 17){
-            ArtChar1.SetActive(false);
+            ArtChar1Lose.SetActive(false);
             ArtChar2a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
@@ -217,6 +236,8 @@ public class Scene2Dialogue : MonoBehaviour
             Char4speech.text = "What’s it to you! It’s none of your business anyway!";
         }
         else if (primeInt == 23){
+            ArtChar1Lose.SetActive(true);
+            ArtChar4b.SetActive(false);
             Char1name.text = "YOU";
             Char1speech.text = "{I don’t know how I feel about this dog…}";
             Char4name.text = "";
@@ -340,14 +361,14 @@ public class Scene2Dialogue : MonoBehaviour
         }
         else if (primeInt == 81){
             ArtChar3b.SetActive(false);
-            ArtChar1.SetActive(true);
+            ArtChar1Lose.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "Sorry I just don’t like them! Their story was suspicious…";
             Char3name.text = "";
             Char3speech.text = "";
         }
         else if (primeInt == 82){
-            ArtChar1.SetActive(false);
+            ArtChar1Lose.SetActive(false);
             ArtChar3b.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
@@ -355,7 +376,7 @@ public class Scene2Dialogue : MonoBehaviour
             Char3speech.text = "You’re normally so friendly!";
         }
         else if (primeInt == 83){
-            ArtChar1.SetActive(true);
+            ArtChar1Lose.SetActive(true);
             ArtChar3b.SetActive(false);
             Char1name.text = "YOU";
             Char1speech.text = "They were acting weird!";
@@ -363,7 +384,7 @@ public class Scene2Dialogue : MonoBehaviour
             Char3speech.text = "";
         }
         else if (primeInt == 84){
-            ArtChar1.SetActive(false);
+            ArtChar1Lose.SetActive(false);
             ArtChar3a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
@@ -399,7 +420,7 @@ public class Scene2Dialogue : MonoBehaviour
         nextButton.SetActive(true);
     }
     public void Choice2aFunct(){
-        ArtChar1.SetActive(false);
+        ArtChar1Lose.SetActive(false);
         ArtChar4a.SetActive(true);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
@@ -413,7 +434,7 @@ public class Scene2Dialogue : MonoBehaviour
     }
 
     public void Choice2bFunct(){
-        ArtChar1.SetActive(false);
+        ArtChar1Lose.SetActive(false);
         ArtChar3b.SetActive(true);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
