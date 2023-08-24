@@ -277,6 +277,7 @@ public class Scene3aDialogue : MonoBehaviour
         nextButton.SetActive(true);
     }
     public void Choice2bFunct(){
+        GameHandler.patience += 2;
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
         primeInt = 30;
