@@ -312,7 +312,7 @@ public class Scene3bDialogue : MonoBehaviour
         primeInt = 25;
         nextButton.SetActive(true);
     }
-    public void nextScene(){
+    public void SceneChange(){
         SceneManager.LoadScene("Scene4");
     }
     public void SceneChangeLose(){
