@@ -637,7 +637,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enjoy what you have
+  m_Text: Poop
 --- !u!222 &418497012
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -933,7 +933,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Steal the treat
+  m_Text: Hold it
 --- !u!222 &650831285
 CanvasRenderer:
   m_ObjectHideFlags: 0
