@@ -207,10 +207,78 @@ public class Scene3bDialogue : MonoBehaviour
             Char2speech.text = "Maybe in a little bit, I’m going to get my haircut first.";
         }
         else if (primeInt == 18){
+            ArtChar1.SetActive(true);
+            ArtChar2a.SetActive(false);
             Char1name.text = "YOU";
-            Char1speech.text = "";
+            Char1speech.text = "Ok, see you around Bosco!";
             Char2name.text = "";
             Char2speech.text = "";
+        }
+        else if (primeInt == 19){
+            ArtChar2a.SetActive(true);
+            ArtChar1.SetActive(false);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Bosco";
+            Char2speech.text = "See you later kid.";
+        }
+        else if (primeInt == 20){
+            ArtChar2a.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Come [dog], let's go pay";
+        }
+        else if (primeInt == 21){
+            ArtChar3a.SetActive(false);
+            ArtBG2.SetActive(false);
+            ArtBG3.SetActive(true);
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 22){
+            ArtChar1Lose.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "{Uh-oh… I have to use the bathroom… really bad… I might be able to hold it but…}";
+            Choice2a.SetActive(true);
+            Choice2b.SetActive(true);
+            nextButton.SetActive(false);
+        }
+        else if (primeInt == 26){
+            ArtChar3b.SetActive(false);
+            ArtChar1Lose.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "I’m sorry!! I really had to go!!";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 27){
+            ArtChar1Lose.SetActive(false);
+            ArtChar3b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "I’ll go tell someone so this can get cleaned up, and then we’re leaving immediately. Oh my gosh this is so embarrassing!";
+            nextButton.SetActive(false);
+            if (GameHandler.patience <= -4){
+                nextSceneLose.SetActive(true);
+            }
+            else {
+                nextScene.SetActive(true);
+            }
+        }
+        else if (primeInt == 30){
+            ArtChar3a.SetActive(false);
+            ArtChar1.SetActive(true);
+            ArtBG3.SetActive(false);
+            ArtBG4.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Oh thank goodness, that was close! I just barely made it outside. But I can see the park! I made it!";
+            Char3name.text = "";
+            Char3speech.text = "";
+            nextButton.SetActive(false);
+            nextScene.SetActive(true);
         }
     }
     public void Choice1(){
@@ -222,5 +290,32 @@ public class Scene3bDialogue : MonoBehaviour
         nextButton.SetActive(true);
         Char2name.text = "Bosco";
         Char2speech.text = "Good choice, kid.";
+    }
+    public void Choice2aFunct(){
+        ArtChar1Lose.SetActive(false);
+        ArtChar3a.SetActive(true);
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char3name.text = "Guardian";
+        Char3speech.text = "Ok, all set in here! Let's go, [dog].";
+        primeInt = 30;
+        nextButton.SetActive(true);
+    }
+    public void Choice2bFunct(){
+        GameHandler.patience -= 1;
+        ArtChar1Lose.SetActive(false);
+        ArtChar3b.SetActive(true);
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char3name.text = "Guardian";
+        Char3speech.text = "Oh my goodness…. I can’t believe you just did that [dog]!!";
+        primeInt = 25;
+        nextButton.SetActive(true);
+    }
+    public void nextScene(){
+        SceneManager.LoadScene("Scene4");
+    }
+    public void SceneChangeLose(){
+        SceneManager.LoadScene("SceneLose");
     }
 }
