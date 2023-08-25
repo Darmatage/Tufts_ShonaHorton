@@ -32,6 +32,9 @@ public class Scene3bDialogue : MonoBehaviour
     public GameObject ArtBG1;
     public GameObject ArtBG2;
     public GameObject ArtBG3;
+    public GameObject ArtBG4;
+    public GameObject Ball;
+    public GameObject Frisbee;
     public GameObject Choice1a;
     public GameObject Choice1b;
     public GameObject Choice2a;
@@ -53,17 +56,18 @@ public class Scene3bDialogue : MonoBehaviour
         ArtChar2b.SetActive(false);
         ArtChar3a.SetActive(false);
         ArtChar3b.SetActive(false);
-        ArtChar4a.SetActive(false);
-        ArtChar4b.SetActive(false);
         ArtBG1.SetActive(true);
         ArtBG2.SetActive(false);
         ArtBG3.SetActive(false);
+        ArtBG4.SetActive(false);
+        Ball.SetActive(false);
+        Frisbee.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
-        nextScene1.SetActive(false);
-        nextScene2.SetActive(false);
+        nextScene.SetActive(false);
+        nextSceneLose.SetActive(false);
         if (GameHandler.collarColor == 0){
             if (GameHandler.ateTowel == 0){
                 ArtChar1 = ArtChar1a;
@@ -156,5 +160,67 @@ public class Scene3bDialogue : MonoBehaviour
             Char2name.text = "Bosco";
             Char2speech.text = "Relax, I’m just pulling your tail. Which toy are you thinking about getting?";
         }
+        else if (primeInt == 9){
+            ArtChar2a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Hm, I’m not sure, I’m trying to decide between this ball and this frisbee. Which one do you think I should get?";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+        else if (primeInt == 10){
+            ArtChar2a.SetActive(true);
+            ArtChar1.SetActive(false);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Bosco";
+            Char2speech.text = "Well that depends. When I was younger, I loved playing catch with my frisbee.";
+        }
+        else if (primeInt == 11){
+            Char2speech.text = "But now in my old age, I’m more of a ball dog myself, I don’t have to run as far.";
+        }
+        else if (primeInt == 12){
+            Char2name.text = "";
+            Char2speech.text = "";
+            ArtChar2a.SetActive(false);
+            Ball.SetActive(true);
+            Frisbee.SetActive(true);
+            Choice1a.SetActive(true);
+            Choice1b.SetActive(true);
+            DialogueDisplay.SetActive(false);
+            nextButton.SetActive(false);
+        }
+        else if (primeInt == 16){
+            ArtChar1.SetActive(true);
+            ArtChar2a.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "Thanks Bosco! Will I see you at the park?";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+        else if (primeInt == 17){
+            ArtChar2a.SetActive(true);
+            ArtChar1.SetActive(false);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Bosco";
+            Char2speech.text = "Maybe in a little bit, I’m going to get my haircut first.";
+        }
+        else if (primeInt == 18){
+            Char1name.text = "YOU";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+    }
+    public void Choice1(){
+        Ball.SetActive(false);
+        Frisbee.SetActive(false);
+        ArtChar2a.SetActive(true);
+        DialogueDisplay.SetActive(true);
+        primeInt = 15;
+        nextButton.SetActive(true);
+        Char2name.text = "Bosco";
+        Char2speech.text = "Good choice, kid.";
     }
 }
