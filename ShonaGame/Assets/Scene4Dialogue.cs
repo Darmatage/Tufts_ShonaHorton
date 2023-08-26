@@ -33,8 +33,8 @@ public class Scene4Dialogue : MonoBehaviour
     public GameObject Choice2a;
     public GameObject Choice2b;
     public GameObject nextButton;
-    public GameObject nextScene;
-    public GameObject nextSceneLose;
+    public GameObject nextScene1;
+    public GameObject nextScene2;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,8 +54,8 @@ public class Scene4Dialogue : MonoBehaviour
         Choice1b.SetActive(false);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
-        nextScene.SetActive(false);
-        nextSceneLose.SetActive(false);
+        nextScene1.SetActive(false);
+        nextScene2.SetActive(false);
         if (GameHandler.collarColor == 0){
             if (GameHandler.ateTowel == 0){
                 ArtChar1 = ArtChar1a;
@@ -87,7 +87,7 @@ public class Scene4Dialogue : MonoBehaviour
     public void Next()
     {
         primeInt = primeInt + 1;
-        else if (primeInt == 1){
+        if (primeInt == 1){
             
         }
         else if (primeInt == 2){
@@ -136,11 +136,35 @@ public class Scene4Dialogue : MonoBehaviour
         }
         else if (primeInt == 8){
             ArtChar2b.SetActive(true);
-            ArtChar1Lose.SetActive(false)
+            ArtChar1Lose.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Frank";
             Char2speech.text = "Oh yea? Well what are you gonna do about it huh? You’re not gonna do anything!";
         }
+        else if (primeInt == 9){
+            ArtChar2b.SetActive(false);
+            ArtChar1Lose.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "{Maybe I should finally teach Frank a lesson…}";
+            Char2name.text = "";
+            Char2speech.text = "";
+            nextButton.SetActive(false);
+            Choice1a.SetActive(true);
+            Choice1b.SetActive(true);
+        }
+    }
+    public void Choice1aFunct(){
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
+        Char1speech.text = "That’s it Frank, I’ve had it! Come here!";
+        nextScene1.SetActive(true);
+    }
+    public void Choice1bFunct(){
+        ArtChar1Lose.SetActive(false);
+        ArtChar1.SetActive(true);
+        Char1speech.text = "You know what Frank, you’re not even worth my time! Why don’t you go bother someone else?";
+        primeInt = 11;
+        nextButton.SetActive(true);
     }
 }
