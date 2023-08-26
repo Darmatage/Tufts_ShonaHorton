@@ -98,6 +98,7 @@ public class Scene3bDialogue : MonoBehaviour
     {
         primeInt = primeInt + 1;
         if (primeInt == 1){
+            DialogueDisplay.SetActive(true);
             ArtChar3a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";

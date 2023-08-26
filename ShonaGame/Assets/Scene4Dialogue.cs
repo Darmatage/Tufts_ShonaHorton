@@ -34,7 +34,6 @@ public class Scene4Dialogue : MonoBehaviour
     public GameObject Choice2b;
     public GameObject nextButton;
     public GameObject nextScene1;
-    public GameObject nextScene2;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +54,6 @@ public class Scene4Dialogue : MonoBehaviour
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
         nextScene1.SetActive(false);
-        nextScene2.SetActive(false);
         if (GameHandler.collarColor == 0){
             if (GameHandler.ateTowel == 0){
                 ArtChar1 = ArtChar1a;
@@ -91,6 +89,7 @@ public class Scene4Dialogue : MonoBehaviour
             
         }
         else if (primeInt == 2){
+            DialogueDisplay.SetActive(true);
             ArtChar1.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "I made it, I made it!! Now I can enjoy the park!";
@@ -153,6 +152,29 @@ public class Scene4Dialogue : MonoBehaviour
             Choice1a.SetActive(true);
             Choice1b.SetActive(true);
         }
+        else if (primeInt == 12){
+            ArtChar1.SetActive(false);
+            ArtChar2b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Frank";
+            Char2speech.text = "Whatever man!";
+        }
+        else if (primeInt == 13){
+            ArtChar2b.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char1name.text = "";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Ok, [dog] do you want to go down our usual path? Or do you want to go down this way, I think I hear music coming from there.";
+        }
+        else if (primeInt == 14){
+            DialogueDisplay.SetActive(false);
+            nextButton.SetActive(false);
+            Choice2a.SetActive(true);
+            Choice2b.SetActive(true);
+        }
     }
     public void Choice1aFunct(){
         Choice1a.SetActive(false);
@@ -161,10 +183,21 @@ public class Scene4Dialogue : MonoBehaviour
         nextScene1.SetActive(true);
     }
     public void Choice1bFunct(){
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
         ArtChar1Lose.SetActive(false);
         ArtChar1.SetActive(true);
         Char1speech.text = "You know what Frank, you’re not even worth my time! Why don’t you go bother someone else?";
         primeInt = 11;
         nextButton.SetActive(true);
+    }
+    public void SceneChange1(){
+        SceneManager.LoadScene("Scene5c");
+    }
+    public void SceneChange2(){
+        SceneManager.LoadScene("Scene5a");
+    }
+    public void SceneChange3(){
+        SceneManager.LoadScene("Scene5b");
     }
 }
