@@ -27,8 +27,6 @@ public class Scene3bDialogue : MonoBehaviour
     public GameObject ArtChar2b;
     public GameObject ArtChar3a;
     public GameObject ArtChar3b;
-    public GameObject Bacon;
-    public GameObject Pumpkin;
     public GameObject ArtBG1;
     public GameObject ArtBG2;
     public GameObject ArtBG3;
