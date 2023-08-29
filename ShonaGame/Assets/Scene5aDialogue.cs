@@ -142,12 +142,99 @@ public class Scene5aDialogue : MonoBehaviour
             Char2speech.text = "";
         }
         else if (primeInt == 8){
-            Char1name.text = "";
-            Char1speech.text = "";
             DialogueDisplay.SetActive(false);
             Choice1a.SetActive(true);
             Choice1b.SetActive(true);
             nextButton.SetActive(false);
         }
+        else if (primeInt == 11){
+            ArtChar1.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Woah! That cyclist is going super fast!";
+        }
+        else if (primeInt == 12){
+            ArtChar3a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Yea really fast! I wonder if I could catch him…";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 13){
+            ArtChar1.SetActive(false);
+            ArtChar2a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Frank";
+            Char2speech.text = "Bad idea, Doofus.";
+        }
+        else if (primeInt == 14){
+            ArtChar1Lose.SetActive(true);
+            ArtChar2a.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "What do you know, Frank!";
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+        else if (primeInt == 15){
+            DialogueDisplay.SetActive(false);
+            Choice2a.SetActive(true);
+            Choice2b.SetActive(true);
+            nextButton.SetActive(false);
+        }
+        else if (primeInt == 21){
+            ArtChar1.SetActive(true);
+            ArtChar3b.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "I am speed!!";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 22){
+            ArtChar1.SetActive(false);
+            ArtChar3b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            if (GameHandler.patience <= -4)
+            {
+                Char3speech.text = "That's it, [dog]! When I catch you we ar going straight home!";
+                nextButton.SetActive(false);
+                nextSceneLose.SetActive(true);
+            }
+            Char3speech.text = "Get back here!";
+        }
+    }
+    public void Choice1Funct(){
+        ArtChar1Lose.SetActive(false);
+        ArtChar1.SetActive(true);
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
+        DialogueDisplay.SetActive(true);
+        nextButton.SetActive(true);
+        Char1name.text = "YOU";
+        Char1speech.text = "I’m ignoring you, Frank.";
+        primeInt = 10;
+    }
+    public void Choice2aFunct(){
+
+    }
+    public void Choice2bFunct(){
+        GameHandler.patience -= 1;
+        ArtChar1Lose.SetActive(false);
+        ArtChar3b.SetActive(true);
+        DialogueDisplay.SetActive(true);
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char3name.text = "Guardian";
+        Char3speech.text = "No [dog]! Stop! Heel!";
+        nextButton.SetActive(true);
+        primeInt = 20;
+    }
+    public void SceneChange1(){
+        SceneManager.LoadScene("Scene5c");
     }
 }

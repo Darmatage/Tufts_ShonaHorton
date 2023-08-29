@@ -480,7 +480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Follow the music
+  m_Text: Chase cyclist
 --- !u!222 &418497012
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -776,7 +776,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Usual path
+  m_Text: Don't chase
 --- !u!222 &650831285
 CanvasRenderer:
   m_ObjectHideFlags: 0
