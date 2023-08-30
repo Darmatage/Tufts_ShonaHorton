@@ -73,16 +73,18 @@ public class Scene2Dialogue : MonoBehaviour
         else{
             ArtChar1 = ArtChar1b;
         }
+
+
         if (GameHandler.collarColor == 0){
             if (GameHandler.ateTowel == 0){
                 ArtChar1Lose = ArtCharLose1a;
             }
             else{
-                ArtChar1 = ArtCharLose1c;
+                ArtChar1Lose = ArtCharLose1c;
             }
         }
         else{
-            ArtChar1 = ArtCharLose1b;
+            ArtChar1Lose = ArtCharLose1b;
         }
         ArtChar1.SetActive(false);
         ArtChar1Lose.SetActive(false);
@@ -347,6 +349,8 @@ public class Scene2Dialogue : MonoBehaviour
             Char4speech.text = "";
         }
         else if (primeInt == 71){
+            ArtChar1.SetActive(true);
+            ArtChar4a.SetActive(false);
             Char1name.text = "";
             Char1speech.text = "";
             Char4name.text = "Ollie";

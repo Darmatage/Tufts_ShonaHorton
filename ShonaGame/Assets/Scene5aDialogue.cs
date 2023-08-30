@@ -33,8 +33,7 @@ public class Scene5aDialogue : MonoBehaviour
     public GameObject Choice2a;
     public GameObject Choice2b;
     public GameObject nextButton;
-    public GameObject nextScene1;
-    public GameObject nextScene2;
+    public GameObject nextScene;
     public GameObject nextSceneLose;
     // Start is called before the first frame update
     void Start()
@@ -55,8 +54,7 @@ public class Scene5aDialogue : MonoBehaviour
         Choice1b.SetActive(false);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
-        nextScene1.SetActive(false);
-        nextScene2.SetActive(false);
+        nextScene.SetActive(false);
         nextSceneLose.SetActive(false);
         if (GameHandler.collarColor == 0){
             if (GameHandler.ateTowel == 0){
@@ -205,7 +203,62 @@ public class Scene5aDialogue : MonoBehaviour
                 nextButton.SetActive(false);
                 nextSceneLose.SetActive(true);
             }
-            Char3speech.text = "Get back here!";
+            else
+            {
+                Char3speech.text = "Get back here!";
+            }
+        }
+        else if (primeInt == 23){
+            ArtChar3b.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Dang it, I lost him! No point chasing him anymore.";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 24){
+            ArtChar3a.SetActive(true);
+            ArtChar1.SetActive(false);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Oh thank goodness you stopped! I did not wear the right shoes to chase you down!";
+        }
+        else if (primeInt == 25){
+            ArtChar3a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Oops, sorry! I really thought I could catch him!";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 26){
+            ArtChar1.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Whew! Now that you've hopefully gotten your zoomies out, lets go to the lake.";
+            nextButton.SetActive(false);
+            nextScene.SetActive(true);
+        }
+        else if (primeInt == 31){
+            ArtChar1.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Let’s head over to the lake [dog], it’s hot out here we should cool down a bit.";
+        }
+        else if (primeInt == 32){
+            ArtChar3a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Ooo yes! I can’t wait to splash around!";
+            Char3name.text = "";
+            Char3speech.text = "";
+            nextButton.SetActive(false);
+            nextScene.SetActive(true);
         }
     }
     public void Choice1Funct(){
@@ -220,7 +273,13 @@ public class Scene5aDialogue : MonoBehaviour
         primeInt = 10;
     }
     public void Choice2aFunct(){
-
+        ArtChar1Lose.SetActive(false);
+        ArtChar1.SetActive(true);
+        DialogueDisplay.SetActive(true);
+        Char1name.text = "YOU";
+        Char1speech.text = "Actually, I think he’s moving a little too fast, even for me.";
+        nextButton.SetActive(true);
+        primeInt = 30;
     }
     public void Choice2bFunct(){
         GameHandler.patience -= 1;
@@ -236,5 +295,11 @@ public class Scene5aDialogue : MonoBehaviour
     }
     public void SceneChange1(){
         SceneManager.LoadScene("Scene5c");
+    }
+    public void SceneChange2(){
+        SceneManager.LoadScene("Scene6a");
+    }
+    public void SceneChangeLose(){
+        SceneManager.LoadScene("SceneLose");
     }
 }
