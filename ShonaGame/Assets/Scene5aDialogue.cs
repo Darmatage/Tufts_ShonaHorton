@@ -199,7 +199,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char3name.text = "Guardian";
             if (GameHandler.patience <= -4)
             {
-                Char3speech.text = "That's it, [dog]! When I catch you we ar going straight home!";
+                Char3speech.text = "That's it, [dog]! When I catch you we are going straight home!";
                 nextButton.SetActive(false);
                 nextSceneLose.SetActive(true);
             }
@@ -212,7 +212,7 @@ public class Scene5aDialogue : MonoBehaviour
             ArtChar3b.SetActive(false);
             ArtChar1.SetActive(true);
             Char1name.text = "YOU";
-            Char1speech.text = "Dang it, I lost him! No point chasing him anymore.";
+            Char1speech.text = "Dang it, I lost him! No point chasing after him anymore.";
             Char3name.text = "";
             Char3speech.text = "";
         }
@@ -238,7 +238,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Whew! Now that you've hopefully gotten your zoomies out, lets go to the lake.";
+            Char3speech.text = "Whew! Now that you've hopefully gotten your zoomies out, lets go to the lake, it's hot out here.";
             nextButton.SetActive(false);
             nextScene.SetActive(true);
         }
