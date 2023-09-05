@@ -146,5 +146,72 @@ public class Scene5bDialogue : MonoBehaviour
             Choice1a.SetActive(true);
             Choice1b.SetActive(true);
         }
+        else if (primeInt == 11){
+            ArtChar1.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Wow, the band is really getting into it!";
+        }
+        else if (primeInt == 12){
+            ArtChar3a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Yea, I’m really feeling the music!";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 13){
+            ArtChar1.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Look now they’re dancing!";
+        }
+        else if (primeInt == 14){
+            ArtChar3a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Oh wow that looks fun, I wanna dance too! Hmm, but I wanna be closer to the music… maybe I should go up on stage…";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 15){
+            DialogueDisplay.SetActive(false);
+            nextButton.SetActive(false);
+            Choice2a.SetActive(true);
+            Choice2b.SetActive(true);
+        }
+    }
+    public void Choice1Funct(){
+        ArtChar1Lose.SetActive(false);
+        ArtChar1.SetActive(true);
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
+        DialogueDisplay.SetActive(true);
+        nextButton.SetActive(true);
+        Char1name.text = "YOU";
+        Char1speech.text = "I’m ignoring you, Frank.";
+        primeInt = 10;
+    }
+    public void Choice2aFunct(){
+        GameHandler.patience -= 1;
+        DialogueDisplay.SetActive(true);
+        ArtChar1.SetActive(false);
+        Char1name.text = "";
+        Char1speech.text = "";
+        ArtChar3b.SetActive(true);
+        Char3name.text = "Guardian";
+        Char3speech.text = "No [dog], get down! Oh geez!";
+        primeInt = 20;
+        nextButton.SetActive(true);
+    }
+    public void Choice2bFunct(){
+        DialogueDisplay.SetActive(true);
+    }
+    public void SceneChange1(){
+        SceneManager.LoadScene("Scene5c");
     }
 }
