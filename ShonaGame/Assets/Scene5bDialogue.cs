@@ -184,6 +184,65 @@ public class Scene5bDialogue : MonoBehaviour
             Choice2a.SetActive(true);
             Choice2b.SetActive(true);
         }
+        else if (primeInt == 21){
+            ArtChar1.SetActive(true);
+            ArtChar3b.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "Oh yea, look at my moves!";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 22){
+            ArtChar1.SetActive(false);
+            ArtChar3b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "[dog], please, get down! You’re messing up the performance!";
+        }
+        else if (primeInt == 23){
+            ArtChar1Lose.SetActive(true);
+            ArtChar3b.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "Oops! Sorry, I just really wanted to dance.";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
+        else if (primeInt == 24){
+            ArtChar1Lose.SetActive(false);
+            ArtChar3b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            if (GameHandler.patience <= -4)
+            {
+                Char3speech.text = "What has gotten into you today, [dog]? I think we should just go home until you behave.";
+                nextButton.SetActive(false);
+                nextSceneLose.SetActive(true);
+            }
+            else
+            {
+                Char3speech.text = "I know you just wanted to dance buddy. Are you ready to head to the lake?";
+            }
+        }
+        else if (primeInt == 25){
+            ArtChar1.SetActive(true);
+            ArtChar3b.SetActive(false);
+            Char1name.text = "Ooo yea! Let's go!!";
+            Char1speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+            nextButton.SetActive(false);
+            nextScene.SetActive(true);
+        }
+        else if (primeInt == 31){
+            ArtChar1.SetActive(false);
+            ArtChar3a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+        }
     }
     public void Choice1Funct(){
         ArtChar1Lose.SetActive(false);
@@ -210,8 +269,17 @@ public class Scene5bDialogue : MonoBehaviour
     }
     public void Choice2bFunct(){
         DialogueDisplay.SetActive(true);
+        Char1speech.text = "Actually, I think I’ll just dance down here.";
+        primeInt = 30;
+        nextButton.SetActive(true);
     }
     public void SceneChange1(){
         SceneManager.LoadScene("Scene5c");
+    }
+    public void SceneChange2(){
+        SceneManager.LoadScene("Scene6a");
+    }
+    public void SceneChangeLose(){
+        SceneManager.LoadScene("SceneLose");
     }
 }
