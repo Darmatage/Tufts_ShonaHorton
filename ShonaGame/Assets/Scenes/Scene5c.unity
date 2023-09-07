@@ -338,8 +338,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1223801168}
-        m_TargetAssemblyTypeName: Scene5bDialogue, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Scene5aDialogue, Assembly-CSharp
         m_MethodName: Choice2bFunct
         m_Mode: 1
         m_Arguments:
@@ -552,9 +552,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1223801168}
-        m_TargetAssemblyTypeName: Scene5bDialogue, Assembly-CSharp
-        m_MethodName: Choice2aFunct
+      - m_Target: {fileID: 1223801163}
+        m_TargetAssemblyTypeName: Scene5aDialogue, Assembly-CSharp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2483,8 +2483,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1223801168}
-        m_TargetAssemblyTypeName: Scene5bDialogue, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Scene5aDialogue, Assembly-CSharp
         m_MethodName: SceneChangeLose
         m_Mode: 1
         m_Arguments:
@@ -2664,14 +2664,14 @@ PrefabInstance:
     - target: {fileID: 4571852104898620341, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1223801168}
+      objectReference: {fileID: 0}
     - target: {fileID: 4571852104898620341, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Next
       objectReference: {fileID: 0}
     - target: {fileID: 4571852104898620341, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene5bDialogue, Assembly-CSharp
+      value: Scene5aDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6637615653833542805, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_Pivot.x
@@ -3256,8 +3256,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1223801168}
-        m_TargetAssemblyTypeName: Scene5bDialogue, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Scene5aDialogue, Assembly-CSharp
         m_MethodName: SceneChange2
         m_Mode: 1
         m_Arguments:
