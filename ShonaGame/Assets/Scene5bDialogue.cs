@@ -240,8 +240,34 @@ public class Scene5bDialogue : MonoBehaviour
             ArtChar3a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Cmon, [dog], let’s dance!";
+        }
+        else if (primeInt == 32){
+            ArtChar3a.SetActive(true);
+            ArtChar1.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "Oh yea, look at my moves!";
             Char3name.text = "";
             Char3speech.text = "";
+        }
+        else if (primeInt == 33){
+            ArtChar3a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Whew, dancing is tiring! Let’s head over to the lake [dog], it’s hot out here we should cool down a bit.";
+        }
+        else if (primeInt == 34){
+            ArtChar3a.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1name.text = "YOU";
+            Char1speech.text = "Ooo yes! I can’t wait to splash around!";
+            Char3name.text = "";
+            Char3speech.text = "";
+            nextButton.SetActive(false);
+            nextScene.SetActive(true);
         }
     }
     public void Choice1Funct(){
