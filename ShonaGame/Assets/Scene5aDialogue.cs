@@ -262,6 +262,8 @@ public class Scene5aDialogue : MonoBehaviour
         }
     }
     public void Choice1Funct(){
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
         ArtChar1Lose.SetActive(false);
         ArtChar1.SetActive(true);
         Choice1a.SetActive(false);
@@ -273,6 +275,8 @@ public class Scene5aDialogue : MonoBehaviour
         primeInt = 10;
     }
     public void Choice2aFunct(){
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
         ArtChar1Lose.SetActive(false);
         ArtChar1.SetActive(true);
         DialogueDisplay.SetActive(true);
@@ -282,6 +286,8 @@ public class Scene5aDialogue : MonoBehaviour
         primeInt = 30;
     }
     public void Choice2bFunct(){
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
         GameHandler.patience -= 1;
         ArtChar1Lose.SetActive(false);
         ArtChar3b.SetActive(true);

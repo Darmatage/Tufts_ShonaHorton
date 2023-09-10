@@ -122,6 +122,8 @@ public class Scene5cDialogue : MonoBehaviour
         }
     }
     public void Choice1Funct(){
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
         DialogueDisplay.SetActive(true);
         Char1name.text = "YOU";
         Char1speech.text = "I’m tired of you making fun of me Frank, I’m gonna get you!";

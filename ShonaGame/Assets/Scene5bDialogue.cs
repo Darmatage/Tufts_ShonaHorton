@@ -271,6 +271,8 @@ public class Scene5bDialogue : MonoBehaviour
         }
     }
     public void Choice1Funct(){
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
         ArtChar1Lose.SetActive(false);
         ArtChar1.SetActive(true);
         Choice1a.SetActive(false);
@@ -282,6 +284,8 @@ public class Scene5bDialogue : MonoBehaviour
         primeInt = 10;
     }
     public void Choice2aFunct(){
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
         GameHandler.patience -= 1;
         DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(false);
@@ -294,6 +298,8 @@ public class Scene5bDialogue : MonoBehaviour
         nextButton.SetActive(true);
     }
     public void Choice2bFunct(){
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
         DialogueDisplay.SetActive(true);
         Char1speech.text = "Actually, I think I’ll just dance down here.";
         primeInt = 30;
