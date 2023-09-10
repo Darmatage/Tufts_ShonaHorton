@@ -495,8 +495,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene2Dialogue, Assembly-CSharp
+      - m_Target: {fileID: 1223801168}
+        m_TargetAssemblyTypeName: Scene3bDialogue, Assembly-CSharp
         m_MethodName: Choice2bFunct
         m_Mode: 1
         m_Arguments:
@@ -559,7 +559,7 @@ RectTransform:
   m_Children:
   - {fileID: 418497010}
   m_Father: {fileID: 1223801167}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -709,8 +709,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene3aDialogue, Assembly-CSharp
+      - m_Target: {fileID: 1223801168}
+        m_TargetAssemblyTypeName: Scene3bDialogue, Assembly-CSharp
         m_MethodName: Choice2aFunct
         m_Mode: 1
         m_Arguments:
@@ -773,7 +773,7 @@ RectTransform:
   m_Children:
   - {fileID: 650831283}
   m_Father: {fileID: 1223801167}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1295,7 +1295,7 @@ RectTransform:
   - {fileID: 1822569139}
   - {fileID: 992062499}
   m_Father: {fileID: 1223801167}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1560,7 +1560,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1223801167}
-  m_RootOrder: 21
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1223801163
 GameObject:
@@ -1669,6 +1669,8 @@ RectTransform:
   - {fileID: 1940115186}
   - {fileID: 994263019}
   - {fileID: 150812145}
+  - {fileID: 1815499111}
+  - {fileID: 1871036333}
   - {fileID: 944434194}
   - {fileID: 2732451458729926509}
   - {fileID: 1729873716}
@@ -1717,14 +1719,12 @@ MonoBehaviour:
   ArtChar2b: {fileID: 1940115183}
   ArtChar3a: {fileID: 994263016}
   ArtChar3b: {fileID: 150812142}
-  Bacon: {fileID: 0}
-  Pumpkin: {fileID: 0}
   ArtBG1: {fileID: 1544153802}
   ArtBG2: {fileID: 1262666378}
   ArtBG3: {fileID: 210390611}
   ArtBG4: {fileID: 244073139}
-  Ball: {fileID: 0}
-  Frisbee: {fileID: 0}
+  Ball: {fileID: 1815499108}
+  Frisbee: {fileID: 1871036330}
   Choice1a: {fileID: 1136112299097676401}
   Choice1b: {fileID: 1294804527891332188}
   Choice2a: {fileID: 569030552}
@@ -2259,8 +2259,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene3aDialogue, Assembly-CSharp
+      - m_Target: {fileID: 1223801168}
+        m_TargetAssemblyTypeName: Scene3bDialogue, Assembly-CSharp
         m_MethodName: SceneChangeLose
         m_Mode: 1
         m_Arguments:
@@ -2323,7 +2323,7 @@ RectTransform:
   m_Children:
   - {fileID: 1638715767}
   m_Father: {fileID: 1223801167}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2486,6 +2486,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793209876}
   m_CullTransparentMesh: 1
+--- !u!1 &1815499108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1815499111}
+  - component: {fileID: 1815499110}
+  - component: {fileID: 1815499109}
+  m_Layer: 5
+  m_Name: Image_Ball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1815499109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815499108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9d7c728c1bb8641c8ad859c9b00be341, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1815499110
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815499108}
+  m_CullTransparentMesh: 1
+--- !u!224 &1815499111
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815499108}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1223801167}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 947.9999, y: 37.99999}
+  m_SizeDelta: {x: 1280, y: 720}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1822569138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2645,6 +2721,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841229376}
   m_CullTransparentMesh: 1
+--- !u!1 &1871036330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871036333}
+  - component: {fileID: 1871036332}
+  - component: {fileID: 1871036331}
+  m_Layer: 5
+  m_Name: Image_Frisbee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1871036331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871036330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0ca47522c538742bbb7dbdca7cb069eb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1871036332
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871036330}
+  m_CullTransparentMesh: 1
+--- !u!224 &1871036333
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871036330}
+  m_LocalRotation: {x: -0, y: -0, z: -0.14190689, w: 0.98988}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1223801167}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.316}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 322, y: 98}
+  m_SizeDelta: {x: 1280, y: 720}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1902951113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,14 +3059,14 @@ PrefabInstance:
     - target: {fileID: 4571852104898620341, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1223801168}
     - target: {fileID: 4571852104898620341, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Next
       objectReference: {fileID: 0}
     - target: {fileID: 4571852104898620341, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Scene2Dialogue, Assembly-CSharp
+      value: Scene3bDialogue, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6637615653833542805, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_Pivot.x
@@ -2926,7 +3078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6637615653833542805, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6637615653833542805, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3054,7 +3206,7 @@ RectTransform:
   m_Children:
   - {fileID: 379583611017924791}
   m_Father: {fileID: 1223801167}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3190,7 +3342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 47999891517990179, guid: ed14270500393410f85beec6980b1bd5, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 47999891517990179, guid: ed14270500393410f85beec6980b1bd5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3494,8 +3646,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Scene3aDialogue, Assembly-CSharp
+      - m_Target: {fileID: 1223801168}
+        m_TargetAssemblyTypeName: Scene3bDialogue, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
@@ -3538,7 +3690,7 @@ RectTransform:
   m_Children:
   - {fileID: 8508335961357489201}
   m_Father: {fileID: 1223801167}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3577,7 +3729,7 @@ RectTransform:
   m_Children:
   - {fileID: 7507491491485970972}
   m_Father: {fileID: 1223801167}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
