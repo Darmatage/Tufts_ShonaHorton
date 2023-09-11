@@ -92,6 +92,7 @@ public class Scene5cDialogue : MonoBehaviour
         if (primeInt == 1){
         }
         else if (primeInt == 2){
+            DialogueDisplay.SetActive(true);
             ArtChar1Lose.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "That’s it Frank, I’ve had it! Come here!";
@@ -138,6 +139,7 @@ public class Scene5cDialogue : MonoBehaviour
             Choice2b.SetActive(true);
             Char2name.text = "";
             Char2speech.text = "";
+            nextButton.SetActive(false);
         }
         else if (primeInt == 16){
             ArtChar1Lose.SetActive(false);
@@ -155,17 +157,14 @@ public class Scene5cDialogue : MonoBehaviour
             DialogueDisplay.SetActive(false);
             Choice3a.SetActive(true);
             Choice3b.SetActive(true);
+            nextButton.SetActive(false);
         }
         else if (primeInt == 21){
-            Char1name.text = "YOU";
-            Char1speech.text = "Uh oh… I think I’m lost! I don’t see my guardian anywhere!";
-        }
-        else if (primeInt == 22){
             ArtChar1Lose.SetActive(false);
             ArtChar1.SetActive(true);
             Char1speech.text = "But wait… what’s that smell?";
         }
-        else if (primeInt == 23){
+        else if (primeInt == 22){
             Char1speech.text = "It smells like… hot dogs!";
             nextButton.SetActive(false);
             nextScene.SetActive(true);
@@ -193,6 +192,8 @@ public class Scene5cDialogue : MonoBehaviour
         Choice3a.SetActive(false);
         Choice3b.SetActive(false);
         DialogueDisplay.SetActive(true);
+        Char1name.text = "YOU";
+        Char1speech.text = "Uh oh… I think I’m lost! I don’t see my guardian anywhere!";
         primeInt = 20;
         nextButton.SetActive(true);
     }
