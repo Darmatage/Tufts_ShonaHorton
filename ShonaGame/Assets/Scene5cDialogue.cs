@@ -32,9 +32,10 @@ public class Scene5cDialogue : MonoBehaviour
     public GameObject Choice1b;
     public GameObject Choice2a;
     public GameObject Choice2b;
+    public GameObject Choice3a;
+    public GameObject Choice3b;
     public GameObject nextButton;
     public GameObject nextScene;
-    public GameObject nextSceneLose;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,8 +55,9 @@ public class Scene5cDialogue : MonoBehaviour
         Choice1b.SetActive(false);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
+        Choice3a.SetActive(false);
+        Choice3b.SetActive(false);
         nextScene.SetActive(false);
-        nextSceneLose.SetActive(false);
         if (GameHandler.collarColor == 0){
             if (GameHandler.ateTowel == 0){
                 ArtChar1 = ArtChar1a;
@@ -120,6 +122,54 @@ public class Scene5cDialogue : MonoBehaviour
             Choice1b.SetActive(true);
             nextButton.SetActive(false);
         }
+        else if (primeInt == 11){
+            ArtChar1Lose.SetActive(false);
+            ArtChar2b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Frank";
+            Char2speech.text = "Please, I could run circles around you!";
+        }
+        else if (primeInt == 12){
+            ArtChar2b.SetActive(false);
+            ArtChar1Lose.SetActive(true);
+            DialogueDisplay.SetActive(false);
+            Choice2a.SetActive(true);
+            Choice2b.SetActive(true);
+            Char2name.text = "";
+            Char2speech.text = "";
+        }
+        else if (primeInt == 16){
+            ArtChar1Lose.SetActive(false);
+            ArtChar2b.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "Frank";
+            Char2speech.text = "Eat my dust, Doofus!";
+        }
+        else if (primeInt == 17){
+            ArtChar2b.SetActive(false);
+            ArtChar1Lose.SetActive(true);
+            Char2name.text = "";
+            Char2speech.text = "";
+            DialogueDisplay.SetActive(false);
+            Choice3a.SetActive(true);
+            Choice3b.SetActive(true);
+        }
+        else if (primeInt == 21){
+            Char1name.text = "YOU";
+            Char1speech.text = "Uh oh… I think I’m lost! I don’t see my guardian anywhere!";
+        }
+        else if (primeInt == 22){
+            ArtChar1Lose.SetActive(false);
+            ArtChar1.SetActive(true);
+            Char1speech.text = "But wait… what’s that smell?";
+        }
+        else if (primeInt == 23){
+            Char1speech.text = "It smells like… hot dogs!";
+            nextButton.SetActive(false);
+            nextScene.SetActive(true);
+        }
     }
     public void Choice1Funct(){
         Choice1a.SetActive(false);
@@ -129,5 +179,24 @@ public class Scene5cDialogue : MonoBehaviour
         Char1speech.text = "I’m tired of you making fun of me Frank, I’m gonna get you!";
         primeInt = 10;
         nextButton.SetActive(true);
+    }
+    public void Choice2Funct(){
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
+        DialogueDisplay.SetActive(true);
+        Char1name.text = "YOU";
+        Char1speech.text = "Get back here, Frank!";
+        primeInt = 15;
+        nextButton.SetActive(true);
+    }
+    public void Choice3Funct(){
+        Choice3a.SetActive(false);
+        Choice3b.SetActive(false);
+        DialogueDisplay.SetActive(true);
+        primeInt = 20;
+        nextButton.SetActive(true);
+    }
+    public void SceneChange(){
+        SceneManager.LoadScene("Scene6b");
     }
 }
