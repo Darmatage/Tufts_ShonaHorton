@@ -173,9 +173,14 @@ public void Next(){
                 Char2name.text = "Felix";
                 Char2speech.text = "I’ll never understand why you do that.";
                 // Turn off "Next" button, turn on "Choice" buttons
+        }
+        else if (primeInt == 16){
+                ArtChar2b.SetActive(false);
+                ArtChar1a.SetActive(true);
                 nextButton.SetActive(false);
-                Choice1a.SetActive(true); // function Choice1aFunct()
-                Choice1b.SetActive(true); // function Choice1bFunct()
+                DialogueDisplay.SetActive(false);
+                Choice1a.SetActive(true);
+                Choice1b.SetActive(true);
         }
         
 
@@ -242,6 +247,32 @@ public void Next(){
                 nextButton.SetActive(false);
                 nextScene.SetActive(true);
         }
+        else if (primeInt == 36){
+                ArtChar1c.SetActive(false);
+                Char1name.text = "";
+                Char1speech.text = "";
+                ArtChar3.SetActive(true);
+                Char3name.text = "Guardian";
+                Char3speech.text = "Oh! Can’t forget your toy.";
+        }
+        else if (primeInt == 37){
+                ArtChar1c.SetActive(true);
+                ArtChar3.SetActive(false);
+                Char1name.text = "YOU";
+                Char1speech.text = "Alright Felix, we’re off to the park!";
+                Char3name.text = "";
+                Char3speech.text = "";
+        }
+        else if (primeInt == 38){
+                ArtChar1c .SetActive(false);
+                ArtChar2a.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Felix";
+                Char2speech.text = "Thank goodness, now I can finally nap.";
+                nextButton.SetActive(false);
+                nextScene.SetActive(true);
+        }
 
 
 
@@ -251,8 +282,7 @@ public void Next(){
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
         public void Choice1bFunct(){
-                ArtChar1a.SetActive(true);
-                ArtChar2b.SetActive(false);
+                DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Oh yuck it was used to clean ketchup! I hate ketchup.";
                 Char2name.text = "";
@@ -291,7 +321,7 @@ public void Next(){
                 Char2speech.text = "";
                 Char1name.text = "YOU";
                 Char1speech.text = "Lookin’ pretty good if I do say so myself!";
-                primeInt = 29;
+                primeInt = 35;
                 Choice2a.SetActive(false);
                 Choice2b.SetActive(false);
                 nextButton.SetActive(true);
