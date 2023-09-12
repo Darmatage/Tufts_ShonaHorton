@@ -124,6 +124,11 @@ public class Scene1bDialogue : MonoBehaviour
             Char1speech.text = "";
             Char3name.text = "Guardian";
             Char3speech.text = "[Dog], drop that right now!";
+        }
+        else if (primeInt == 10){
+            ArtChar1a.SetActive(true);
+            ArtChar3b.SetActive(false);
+            DialogueDisplay.SetActive(false);
             nextButton.SetActive(false);
             Choice1a.SetActive(true);
             Choice1b.SetActive(true);
@@ -199,7 +204,8 @@ public class Scene1bDialogue : MonoBehaviour
         }
     }
     public void Choice1aFunct(){
-        ArtChar3b.SetActive(false);
+        ArtChar1a.SetActive(false);
+        DialogueDisplay.SetActive(true);
         ArtChar3a.SetActive(true);
         Char3speech.text = "Good dog, [Dog].";
         Choice1a.SetActive(false);
@@ -208,6 +214,9 @@ public class Scene1bDialogue : MonoBehaviour
         nextButton.SetActive(true);
     }
     public void Choice1bFunct(){
+        ArtChar1a.SetActive(false);
+        ArtChar3b.SetActive(true);
+        DialogueDisplay.SetActive(true);
         GameHandler.ateTowel = 1;
         GameHandler.patience -= 1;
         Choice1a.SetActive(false);
