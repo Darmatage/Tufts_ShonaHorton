@@ -16,24 +16,12 @@ public class Scene6aDialogue : MonoBehaviour
     public Text Char3speech;
     public GameObject DialogueDisplay;
     GameObject ArtChar1;
-    GameObject ArtChar1Lose;
     public GameObject ArtChar1a;
     public GameObject ArtChar1b;
     public GameObject ArtChar1c;
-    public GameObject ArtCharLose1a;
-    public GameObject ArtCharLose1b;
-    public GameObject ArtCharLose1c;
     public GameObject ArtChar2a;
-    public GameObject ArtChar2b;
     public GameObject ArtChar3a;
-    public GameObject ArtChar3b;
     public GameObject ArtBG1;
-    public GameObject Choice1a;
-    public GameObject Choice1b;
-    public GameObject Choice2a;
-    public GameObject Choice2b;
-    public GameObject Choice3a;
-    public GameObject Choice3b;
     public GameObject nextButton;
     public GameObject nextScene;
     // Start is called before the first frame update
@@ -43,20 +31,9 @@ public class Scene6aDialogue : MonoBehaviour
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
         ArtChar1c.SetActive(false);
-        ArtCharLose1a.SetActive(false);
-        ArtCharLose1b.SetActive(false);
-        ArtCharLose1c.SetActive(false);
         ArtChar2a.SetActive(false);
-        ArtChar2b.SetActive(false);
         ArtChar3a.SetActive(false);
-        ArtChar3b.SetActive(false);
         ArtBG1.SetActive(true);
-        Choice1a.SetActive(false);
-        Choice1b.SetActive(false);
-        Choice2a.SetActive(false);
-        Choice2b.SetActive(false);
-        Choice3a.SetActive(false);
-        Choice3b.SetActive(false);
         nextScene.SetActive(false);
         if (GameHandler.collarColor == 0){
             if (GameHandler.ateTowel == 0){
@@ -69,19 +46,7 @@ public class Scene6aDialogue : MonoBehaviour
         else{
             ArtChar1 = ArtChar1b;
         }
-        if (GameHandler.collarColor == 0){
-            if (GameHandler.ateTowel == 0){
-                ArtChar1Lose = ArtCharLose1a;
-            }
-            else{
-                ArtChar1 = ArtCharLose1c;
-            }
-        }
-        else{
-            ArtChar1 = ArtCharLose1b;
-        }
         ArtChar1.SetActive(false);
-        ArtChar1Lose.SetActive(false);
         nextButton.SetActive(true);
     }
 
@@ -93,6 +58,7 @@ public class Scene6aDialogue : MonoBehaviour
 
         }
         else if (primeInt == 2){
+            DialogueDisplay.SetActive(true);
             ArtChar1.SetActive(true);
             Char1name.text = "YOU";
             Char1speech.text = "Ooo the lake!! Look at all the little ducks!";
