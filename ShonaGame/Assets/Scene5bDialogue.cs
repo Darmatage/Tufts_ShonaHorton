@@ -92,6 +92,7 @@ public class Scene5bDialogue : MonoBehaviour
             
         }
         else if (primeInt == 2){
+            DialogueDisplay.SetActive(true);
             ArtChar3a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
