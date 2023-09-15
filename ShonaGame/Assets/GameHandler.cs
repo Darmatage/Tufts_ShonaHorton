@@ -11,6 +11,7 @@ public class GameHandler : MonoBehaviour{
         public static int ateTowel = 0;
         public static double patience = 4;
         public static int nice = 0;
+        public static string playerName = "YOU";
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
@@ -75,5 +76,14 @@ public class GameHandler : MonoBehaviour{
                 #else
                 Application.Quit();
                 #endif
+        }
+
+        public void UpdateName(string newName){
+                playerName = newName;
+                Debug.Log("name changed to " + playerName);
+        }
+        
+        public string GetName(){
+                return playerName;
         }
 }
