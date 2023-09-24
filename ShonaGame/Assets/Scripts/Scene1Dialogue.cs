@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
+
 public class Scene1Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
@@ -29,6 +30,8 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject Collar2;
         public GameObject nextButton;
         public GameObject nextScene;
+        public string playerName;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
@@ -62,7 +65,7 @@ public void Next(){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Felix! Felix! Guess what?!"));
+                StartCoroutine(TypeText(Char1speech, "Felix! Felix! Guess what?! "));
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
@@ -74,13 +77,13 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "Oh geez, what do you want? I’ve already seen you chase your tail three times today, it’s gotten pretty old."));
+                StartCoroutine(TypeText(Char2speech, "Oh geez, what do you want? I’ve already seen you chase your tail three times today, it’s gotten pretty old. "));
         }
        else if (primeInt == 4){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "No not that! Our guardian and I are going to the dog park!"));
+                StartCoroutine(TypeText(Char1speech, "No not that! Our guardian and I are going to the dog park! "));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -90,7 +93,7 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "And so it begins. Do you think you’ll actually make it to the park this time?"));
+                StartCoroutine(TypeText(Char2speech, "And so it begins. Do you think you’ll actually make it to the park this time? "));
         }
        else if (primeInt == 6){
                 ArtChar1a.SetActive(true);
@@ -106,7 +109,7 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "Almost every time you try to go to the park, something happens that freaks our poor guardian out and you come home early."));
+                StartCoroutine(TypeText(Char2speech, "Almost every time you try to go to the park, something happens that freaks our poor guardian out and you come home early. "));
         }
        else if (primeInt == 8){
                 ArtChar1a.SetActive(true);
@@ -122,13 +125,13 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "Oh it’s true, you haven’t been to the park in a week and a half. I know because that was the last time I got any peace in this house."));
+                StartCoroutine(TypeText(Char2speech, "Oh it’s true, you haven’t been to the park in a week and a half. I know because that was the last time I got any peace in this house. "));
         }
         else if (primeInt == 10){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Oh… I guess you’re right. But today I’m gonna make it to the park! Nothing will get in my way!"));
+                StartCoroutine(TypeText(Char1speech, "Oh… I guess you’re right. But today I’m gonna make it to the park! Nothing will get in my way! "));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -138,13 +141,13 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "Boy I hope so, I could really use the peace and quiet."));
+                StartCoroutine(TypeText(Char2speech, "Boy I hope so, I could really use the peace and quiet. "));
         }
         else if (primeInt == 12){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Wait do you smell that… it smells like… a used paper towel!! I see it, it’s on the floor in the kitchen!"));
+                StartCoroutine(TypeText(Char1speech, "Wait do you smell that… it smells like… a used paper towel!! I see it, it’s on the floor in the kitchen! "));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -155,13 +158,13 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "You’re going to eat it, aren’t you?"));
+                StartCoroutine(TypeText(Char2speech, "You’re going to eat it, aren’t you? "));
         }
         else if (primeInt == 14){
                 ArtChar1a.SetActive(true);
                 ArtChar2b.SetActive(false);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "… Maybe…"));
+                StartCoroutine(TypeText(Char1speech, "…Maybe… "));
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -171,7 +174,7 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "I’ll never understand why you do that."));
+                StartCoroutine(TypeText(Char2speech, "I’ll never understand why you do that. "));
                 // Turn off "Next" button, turn on "Choice" buttons
         }
         else if (primeInt == 16){
@@ -193,13 +196,13 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char3name.text = "Guardian";
-                StartCoroutine(TypeText(Char3speech, "OK, [dog]! What color collar do you want to wear today?"));
+                StartCoroutine(TypeText(Char3speech, "OK, [dog]! What color collar do you want to wear today? "));
         }
        else if (primeInt == 21){
                 ArtChar1a.SetActive(true);
                 ArtChar3.SetActive(false);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Ooh! Felix, what color collar should I choose?"));
+                StartCoroutine(TypeText(Char1speech, "Ooh! Felix, what color collar should I choose? "));
                 Char3name.text = "";
                 Char3speech.text = "";
         }
@@ -210,7 +213,7 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "Whichever one gets you out of the house faster."));
+                StartCoroutine(TypeText(Char2speech, "Whichever one gets you out of the house faster. "));
         }
         else if (primeInt == 23){
                 ArtChar2a.SetActive(false);
@@ -227,13 +230,13 @@ public void Next(){
                 Char1speech.text = "";
                 ArtChar3.SetActive(true);
                 Char3name.text = "Guardian";
-                StartCoroutine(TypeText(Char3speech, "Oh! Can’t forget your toy."));
+                StartCoroutine(TypeText(Char3speech, "Oh! Can’t forget your toy. "));
         }
         else if (primeInt == 31){
                 ArtChar1b.SetActive(true);
                 ArtChar3.SetActive(false);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Alright Felix, we’re off to the park!"));
+                StartCoroutine(TypeText(Char1speech, "Alright Felix, we’re off to the park! "));
                 Char3name.text = "";
                 Char3speech.text = "";
         }
@@ -253,13 +256,13 @@ public void Next(){
                 Char1speech.text = "";
                 ArtChar3.SetActive(true);
                 Char3name.text = "Guardian";
-                StartCoroutine(TypeText(Char3speech, "Oh! Can’t forget your toy."));
+                StartCoroutine(TypeText(Char3speech, "Oh! Can’t forget your toy. "));
         }
         else if (primeInt == 37){
                 ArtChar1c.SetActive(true);
                 ArtChar3.SetActive(false);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Alright Felix, we’re off to the park!"));
+                StartCoroutine(TypeText(Char1speech, "Alright Felix, we’re off to the park! "));
                 Char3name.text = "";
                 Char3speech.text = "";
         }
@@ -269,7 +272,7 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Felix";
-                StartCoroutine(TypeText(Char2speech, "Thank goodness, now I can finally nap."));
+                StartCoroutine(TypeText(Char2speech, "Thank goodness, now I can finally nap. "));
                 nextButton.SetActive(false);
                 nextScene.SetActive(true);
         }
@@ -284,7 +287,7 @@ public void Next(){
         public void Choice1bFunct(){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Oh yuck it was used to clean ketchup! I hate ketchup."));
+                StartCoroutine(TypeText(Char1speech, "Oh yuck it was used to clean ketchup! I hate ketchup. "));
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 19;
@@ -303,7 +306,7 @@ public void Next(){
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Lookin’ pretty good if I do say so myself!"));
+                StartCoroutine(TypeText(Char1speech, "Lookin’ pretty good if I do say so myself! "));
                 primeInt = 29;
                 Choice2a.SetActive(false);
                 Choice2b.SetActive(false);
@@ -320,7 +323,7 @@ public void Next(){
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char1name.text = "YOU";
-                StartCoroutine(TypeText(Char1speech, "Lookin’ pretty good if I do say so myself!"));
+                StartCoroutine(TypeText(Char1speech, "Lookin’ pretty good if I do say so myself! "));
                 primeInt = 35;
                 Choice2a.SetActive(false);
                 Choice2b.SetActive(false);
