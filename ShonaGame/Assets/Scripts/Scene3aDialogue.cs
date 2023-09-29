@@ -20,7 +20,6 @@ public class Scene3aDialogue : MonoBehaviour
     public GameObject ArtChar1b;
     public GameObject ArtChar1c;
     public GameObject ArtChar2a;
-    public GameObject ArtChar2b;
     public GameObject ArtChar3a;
     public GameObject ArtChar3b;
     public GameObject Bacon;
@@ -41,7 +40,6 @@ public class Scene3aDialogue : MonoBehaviour
         ArtChar1b.SetActive(false);
         ArtChar1c.SetActive(false);
         ArtChar2a.SetActive(false);
-        ArtChar2b.SetActive(false);
         ArtChar3a.SetActive(false);
         ArtChar3b.SetActive(false);
         Bacon.SetActive(false);
@@ -143,7 +141,7 @@ public class Scene3aDialogue : MonoBehaviour
         }
         else if (primeInt == 10){
             ArtChar1.SetActive(false);
-            ArtChar2b.SetActive(true);
+            ArtChar2a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Plunky";
@@ -152,7 +150,7 @@ public class Scene3aDialogue : MonoBehaviour
         else if (primeInt == 11){
             Char2name.text = "";
             Char2speech.text = "";
-            ArtChar2b.SetActive(false);
+            ArtChar2a.SetActive(false);
             DialogueDisplay.SetActive(false);
             Bacon.SetActive(true);
             Pumpkin.SetActive(true);
