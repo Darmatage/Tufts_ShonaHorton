@@ -28,9 +28,13 @@ public class Scene6bDialogue : MonoBehaviour
     public GameObject ArtBG1;
     public GameObject nextButton;
     public GameObject nextScene;
+    public string playerName;
+    public GameHandler gameHandler;
     // Start is called before the first frame update
     void Start()
     {
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false); 
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -81,7 +85,7 @@ public class Scene6bDialogue : MonoBehaviour
         else if (primeInt == 2){
             ArtChar1Lose.SetActive(true);
             DialogueDisplay.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Ooo hot dogs! I hope my guardian will get me one… whenever I find them.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -99,7 +103,7 @@ public class Scene6bDialogue : MonoBehaviour
         else if (primeInt == 4){
             ArtChar1Lose.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I’ve had enough of you, Frank! I-";
             Char2name.text = "";
             Char2speech.text = "";
@@ -110,12 +114,12 @@ public class Scene6bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = " [DOG]!!! There you are! I’ve been looking all over for you!";
+            Char3speech.text = playerName.ToUpper() + "!!! There you are! I’ve been looking all over for you!";
         }
         else if (primeInt == 6){
             ArtChar1.SetActive(true);
             ArtChar3a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh there you are! Can I have a hot dog?";
             Char3name.text = "";
             Char3speech.text = "";
@@ -131,7 +135,7 @@ public class Scene6bDialogue : MonoBehaviour
         else if (primeInt == 8){
             ArtChar1Lose.SetActive(true);
             ArtChar3a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "…well I was hoping…";
             Char3name.text = "";
             Char3speech.text = "";
@@ -147,7 +151,7 @@ public class Scene6bDialogue : MonoBehaviour
         else if (primeInt == 10){
             ArtChar1Lose.SetActive(true);
             ArtChar3a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "It was Frank! He-";
             Char3name.text = "";
             Char3speech.text = "";

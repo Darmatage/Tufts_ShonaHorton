@@ -36,9 +36,13 @@ public class Scene5cDialogue : MonoBehaviour
     public GameObject Choice3b;
     public GameObject nextButton;
     public GameObject nextScene;
+    public string playerName;
+    public GameHandler gameHandler;
     // Start is called before the first frame update
     void Start()
     {
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false); 
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -94,7 +98,7 @@ public class Scene5cDialogue : MonoBehaviour
         else if (primeInt == 2){
             DialogueDisplay.SetActive(true);
             ArtChar1Lose.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "That’s it Frank, I’ve had it! Come here!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -112,7 +116,7 @@ public class Scene5cDialogue : MonoBehaviour
         else if (primeInt == 4){
             ArtChar2b.SetActive(false);
             ArtChar1Lose.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I’ve had enough of your big mouth!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -174,7 +178,7 @@ public class Scene5cDialogue : MonoBehaviour
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         DialogueDisplay.SetActive(true);
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "I’m tired of you making fun of me Frank, I’m gonna get you!";
         primeInt = 10;
         nextButton.SetActive(true);
@@ -183,7 +187,7 @@ public class Scene5cDialogue : MonoBehaviour
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
         DialogueDisplay.SetActive(true);
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Get back here, Frank!";
         primeInt = 15;
         nextButton.SetActive(true);
@@ -192,7 +196,7 @@ public class Scene5cDialogue : MonoBehaviour
         Choice3a.SetActive(false);
         Choice3b.SetActive(false);
         DialogueDisplay.SetActive(true);
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Uh oh… I think I’m lost! I don’t see my guardian anywhere!";
         primeInt = 20;
         nextButton.SetActive(true);

@@ -24,9 +24,13 @@ public class Scene6aDialogue : MonoBehaviour
     public GameObject ArtBG1;
     public GameObject nextButton;
     public GameObject nextScene;
+    public string playerName;
+    public GameHandler gameHandler;
     // Start is called before the first frame update
     void Start()
     {
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false); 
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -60,7 +64,7 @@ public class Scene6aDialogue : MonoBehaviour
         else if (primeInt == 2){
             DialogueDisplay.SetActive(true);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Ooo the lake!! Look at all the little ducks!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -73,12 +77,12 @@ public class Scene6aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Woah careful, [dog]! Don’t splash me!";
+            Char3speech.text = "Woah careful, " + playerName + "! Don’t splash me!";
         }
         else if (primeInt == 4){
             ArtChar3a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Throw my toy, throw my toy!!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -95,12 +99,12 @@ public class Scene6aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Ollie";
-            Char2speech.text = "Hey [dog]! It’s me, Ollie!";
+            Char2speech.text = "Hey " + playerName + "! It’s me, Ollie!";
         }
         else if (primeInt == 12){
             ArtChar1.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh my goodness!! Hi Ollie!! Wanna play with my toy with me?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -120,12 +124,12 @@ public class Scene6aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Ok [dog], go get it!";
+            Char3speech.text = "Ok " + playerName + ", go get it!";
         }
         else if (primeInt == 17){
             ArtChar1.SetActive(true);
             ArtChar3a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I got it, I got it!!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -143,7 +147,7 @@ public class Scene6aDialogue : MonoBehaviour
             ArtChar2a.SetActive(false);
             ArtChar3a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "This is so fun!!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -156,12 +160,12 @@ public class Scene6aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "You really love the park, don’t you [dog]?";
+            Char3speech.text = "You really love the park, don’t you " + playerName + "?";
         }
         else if (primeInt == 23){
             ArtChar3a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Yes yes yes! This is the best day ever!!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -177,7 +181,7 @@ public class Scene6aDialogue : MonoBehaviour
         else if (primeInt == 25){
             ArtChar3a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Ok!!";
             Char3name.text = "";
             Char3speech.text = "";
