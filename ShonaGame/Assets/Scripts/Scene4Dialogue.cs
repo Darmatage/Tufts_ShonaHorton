@@ -34,9 +34,13 @@ public class Scene4Dialogue : MonoBehaviour
     public GameObject Choice2b;
     public GameObject nextButton;
     public GameObject nextScene1;
+    public string playerName;
+    public GameHandler gameHandler;
     // Start is called before the first frame update
     void Start()
     {
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false); 
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -91,7 +95,7 @@ public class Scene4Dialogue : MonoBehaviour
         else if (primeInt == 2){
             DialogueDisplay.SetActive(true);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I made it, I made it!! Now I can enjoy the park!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -109,7 +113,7 @@ public class Scene4Dialogue : MonoBehaviour
         else if (primeInt == 4){
             ArtChar1Lose.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "{Ugh it’s Frank}";
             Char2name.text = "";
             Char2speech.text = "";
@@ -128,7 +132,7 @@ public class Scene4Dialogue : MonoBehaviour
         else if (primeInt == 7){
             ArtChar1Lose.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "You know Frank, I’m getting really tired of you making fun of me all the time.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -144,7 +148,7 @@ public class Scene4Dialogue : MonoBehaviour
         else if (primeInt == 9){
             ArtChar2b.SetActive(false);
             ArtChar1Lose.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "{Maybe I should finally teach Frank a lesson…}";
             Char2name.text = "";
             Char2speech.text = "";
@@ -167,7 +171,7 @@ public class Scene4Dialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Ok, [dog] do you want to go down our usual path? Or do you want to go down this way, I think I hear music coming from there.";
+            Char3speech.text = "Ok, " + playerName + " do you want to go down our usual path? Or do you want to go down this way, I think I hear music coming from there.";
         }
         else if (primeInt == 14){
             DialogueDisplay.SetActive(false);

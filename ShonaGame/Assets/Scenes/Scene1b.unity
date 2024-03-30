@@ -981,6 +981,8 @@ MonoBehaviour:
   Choice1b: {fileID: 1294804527891332188}
   nextButton: {fileID: 4209056869450506170}
   nextScene: {fileID: 5033430130427219912}
+  playerName: 
+  gameHandler: {fileID: 4037419739540218815}
 --- !u!1 &1262666378
 GameObject:
   m_ObjectHideFlags: 0

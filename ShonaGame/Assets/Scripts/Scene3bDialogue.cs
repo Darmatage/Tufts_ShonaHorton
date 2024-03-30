@@ -40,9 +40,13 @@ public class Scene3bDialogue : MonoBehaviour
     public GameObject nextButton;
     public GameObject nextScene;
     public GameObject nextSceneLose;
+    public string playerName;
+    public GameHandler gameHandler;
     // Start is called before the first frame update
     void Start()
     {
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false); 
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -108,12 +112,12 @@ public class Scene3bDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Oh geez [dog], I forgot your toy at home! We should probably stop at the pet store to get one.";
+            Char3speech.text = "Oh geez " + playerName + ", I forgot your toy at home! We should probably stop at the pet store to get one.";
         }
         else if (primeInt == 3){
             ArtChar3a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Ooo yes please!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -135,7 +139,7 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 6){
             ArtChar2a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh hey Bosco! Yea, we’re stopping to get a toy first.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -151,7 +155,7 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 8){
             ArtChar2a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Why does everyone keep saying that?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -167,7 +171,7 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 10){
             ArtChar2a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Hm, I’m not sure, I’m trying to decide between this ball and this frisbee. Which one do you think I should get?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -197,7 +201,7 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 16){
             ArtChar1.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Thanks Bosco! Will I see you at the park?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -213,7 +217,7 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 18){
             ArtChar1.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Ok, see you around Bosco!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -232,7 +236,7 @@ public class Scene3bDialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Come [dog], let's go pay";
+            Char3speech.text = "Come " + playerName + ", let's go pay";
         }
         else if (primeInt == 21){
             DialogueDisplay.SetActive(false);
@@ -245,7 +249,7 @@ public class Scene3bDialogue : MonoBehaviour
             Char3name.text = "";
             Char3speech.text = "";
             ArtChar1Lose.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "{Uh-oh… I have to use the bathroom… really bad… I might be able to hold it but…}";
         }
         else if (primeInt == 23){
@@ -257,7 +261,7 @@ public class Scene3bDialogue : MonoBehaviour
         else if (primeInt == 26){
             ArtChar3b.SetActive(false);
             ArtChar1Lose.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I’m sorry!! I really had to go!!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -282,7 +286,7 @@ public class Scene3bDialogue : MonoBehaviour
             ArtChar1.SetActive(true);
             ArtBG3.SetActive(false);
             ArtBG4.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh thank goodness, that was close! I just barely made it outside. But I can see the park! I made it!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -311,7 +315,7 @@ public class Scene3bDialogue : MonoBehaviour
         Char1name.text = "";
         Char1speech.text = "";
         Char3name.text = "Guardian";
-        Char3speech.text = "Ok, all set in here! Let's go, [dog].";
+        Char3speech.text = "Ok, all set in here! Let's go, " + playerName + ".";
         primeInt = 30;
         nextButton.SetActive(true);
     }
@@ -325,7 +329,7 @@ public class Scene3bDialogue : MonoBehaviour
         Char1name.text = "";
         Char1speech.text = "";
         Char3name.text = "Guardian";
-        Char3speech.text = "Oh my goodness…. I can’t believe you just did that [dog]!!";
+        Char3speech.text = "Oh my goodness…. I can’t believe you just did that " + playerName + "!!";
         primeInt = 25;
         nextButton.SetActive(true);
     }

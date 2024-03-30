@@ -39,9 +39,13 @@ public class Scene2Dialogue : MonoBehaviour
     public GameObject nextButton;
     public GameObject nextScene1;
     public GameObject nextScene2;
+    public string playerName;
+    public GameHandler gameHandler;
     // Start is called before the first frame update
     void Start()
     {
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false); 
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -112,7 +116,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 3){
             ArtChar2a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh, hey Frank. I will make it this time!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -128,13 +132,13 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 5){
             ArtChar2b.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Whatever Frank! I’m not gonna let you get in my head!";
             Char2name.text = "";
             Char2speech.text = "";
         }
         else if (primeInt == 6){
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "{Ooo a fire hydrant… I kind of want to pee on it… oh but I don’t wanna be stereotypical… but it would be fun…}";
             Char2name.text = "";
             Char2speech.text = "";
@@ -145,7 +149,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 11){
             ArtChar2b.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I will not apologize for having fun, Frank.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -158,12 +162,12 @@ public class Scene2Dialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Ugh, [dog]! You almost peed on my shoe!";
+            Char3speech.text = "Ugh, " + playerName + "! You almost peed on my shoe!";
         }
         else if (primeInt == 13){
             ArtChar3b.SetActive(false);
             ArtChar1Lose.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oops…";
             Char2name.text = "";
             Char2speech.text = "";
@@ -189,7 +193,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 16){
             ArtChar1Lose.SetActive(true);
             ArtChar3a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Frank is the one who needs to leave me alone!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -205,7 +209,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 18){
             ArtChar1.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I’ll see you there!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -224,7 +228,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 21){
             ArtChar1.SetActive(true);
             ArtChar4a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh… ok… what kind of accident!";
             Char4name.text = "";
             Char4speech.text = "";
@@ -240,7 +244,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 23){
             ArtChar1Lose.SetActive(true);
             ArtChar4b.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "{I don’t know how I feel about this dog…}";
             Char4name.text = "";
             Char4speech.text = "";
@@ -259,7 +263,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 52){
             ArtChar1.SetActive(true);
             ArtChar2b.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I don’t have to explain myself to you, Frank.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -277,7 +281,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 54){
             ArtChar1.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I’ll see you there!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -296,7 +300,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 57){
             ArtChar1.SetActive(true);
             ArtChar4a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh… ok… what kind of accident!";
             Char4name.text = "";
             Char4speech.text = "";
@@ -310,7 +314,7 @@ public class Scene2Dialogue : MonoBehaviour
             Char4speech.text = "What’s it to you! It’s none of your business anyway!";
         }
         else if (primeInt == 59){
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "{I don’t know how I feel about this dog…}";
             Char4name.text = "";
             Char4speech.text = "";
@@ -327,7 +331,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 68){
             ArtChar4a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh! Hey look, accidents happen, when you gotta go you gotta go! You can’t dwell on it, you gotta move on.";
             Char4name.text = "";
             Char4speech.text = "";
@@ -343,8 +347,8 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 70){
             ArtChar4a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
-            Char1speech.text = "No problem! I’m [dog]. Welcome to the neighborhood, Ollie!";
+            Char1name.text = playerName;
+            Char1speech.text = "No problem! I’m " + playerName + ". Welcome to the neighborhood, Ollie!";
             Char4name.text = "";
             Char4speech.text = "";
         }
@@ -366,7 +370,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 81){
             ArtChar3b.SetActive(false);
             ArtChar1Lose.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Sorry I just don’t like them! Their story was suspicious…";
             Char3name.text = "";
             Char3speech.text = "";
@@ -382,7 +386,7 @@ public class Scene2Dialogue : MonoBehaviour
         else if (primeInt == 83){
             ArtChar1Lose.SetActive(true);
             ArtChar3b.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "They were acting weird!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -445,7 +449,7 @@ public class Scene2Dialogue : MonoBehaviour
         Char1name.text = "";
         Char1speech.text = "";
         Char3name.text = "Guardian";
-        Char3speech.text = "No [dog]! What is with you today?";
+        Char3speech.text = "No " + playerName + "! What is with you today?";
         GameHandler.patience -= 1;
         primeInt = 80;
         nextButton.SetActive(true);

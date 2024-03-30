@@ -32,9 +32,13 @@ public class Scene3aDialogue : MonoBehaviour
     public GameObject nextButton;
     public GameObject nextScene;
     public GameObject nextSceneLose;
+    public string playerName;
+    public GameHandler gameHandler;
     // Start is called before the first frame update
     void Start()
     {
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false); 
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -79,14 +83,14 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Plunky";
-            Char2speech.text = "Hiya [dog]! Hiya [dog]! Whatcha doing? Whatcha doing?";
+            Char2speech.text = "Hiya " + playerName + "! Hiya " + playerName + "! Whatcha doing? Whatcha doing?";
             Char3name.text = "";
             Char3speech.text = "";
         }
         else if (primeInt == 3){
             ArtChar2a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Oh hi Plunky! We’re going to the park!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -102,7 +106,7 @@ public class Scene3aDialogue : MonoBehaviour
         else if (primeInt == 5){
             ArtChar1.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I don’t think my guardian would like that…";
             Char2name.text = "";
             Char2speech.text = "";
@@ -118,7 +122,7 @@ public class Scene3aDialogue : MonoBehaviour
         else if (primeInt == 7){
             ArtChar2a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Ooo Plunky which treat do you think I should get? The bacon one is always good, but they have a pumpkin one that I’ve never tried! Hmmm…";
             Char2name.text = "";
             Char2speech.text = "";
@@ -134,7 +138,7 @@ public class Scene3aDialogue : MonoBehaviour
         else if (primeInt == 9){
             ArtChar2a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Uh Plunky… they don’t have crackers here…";
             Char2name.text = "";
             Char2speech.text = "";
@@ -164,12 +168,12 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Alright [dog], ready to go?";
+            Char3speech.text = "Alright " + playerName + ", ready to go?";
         }
         else if (primeInt == 17){
             ArtChar1.SetActive(true);
             ArtChar3a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Yup, I’m ready! *sniff* wait… *sniff sniff* Plunky do you smell that?";
             Char3name.text = "";
             Char3speech.text = "";
@@ -185,7 +189,7 @@ public class Scene3aDialogue : MonoBehaviour
         else if (primeInt == 19){
             ArtChar2a.SetActive(false);
             ArtChar1.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "That guy got the last peanut butter flavor bomb! Ooo and peanut butter’s my favorite!";
             Char2name.text = "";
             Char2speech.text = "";
@@ -199,7 +203,7 @@ public class Scene3aDialogue : MonoBehaviour
         else if (primeInt == 26){
             ArtChar1.SetActive(true);
             ArtChar3b.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Mmmm peanut butter… so good…";
             Char3name.text = "";
             Char3speech.text = "";
@@ -225,12 +229,12 @@ public class Scene3aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Come on, [dog], let's get to the park!";
+            Char3speech.text = "Come on, " + playerName + ", let's get to the park!";
         }
         else if (primeInt == 32){
             ArtChar1.SetActive(true);
             ArtChar3a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Yes let’s go!!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -247,7 +251,7 @@ public class Scene3aDialogue : MonoBehaviour
         Choice1b.SetActive(false);
         nextButton.SetActive(true);
         primeInt = 15;
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "Can't go wrong with bacon!";
     }
     public void Choice1bFunct(){
@@ -259,7 +263,7 @@ public class Scene3aDialogue : MonoBehaviour
         Choice1b.SetActive(false);
         nextButton.SetActive(true);
         primeInt = 15;
-        Char1name.text = "YOU";
+        Char1name.text = playerName;
         Char1speech.text = "I'm feeling adventurous, lets go with pumpkin!";
     }
     public void Choice2aFunct(){
@@ -272,7 +276,7 @@ public class Scene3aDialogue : MonoBehaviour
         Char1name.text = "";
         Char1speech.text = "";
         Char3name.text = "Guardian";
-        Char3speech.text = "No [dog], drop it! I literally just bought you some treats!!";
+        Char3speech.text = "No " + playerName + ", drop it! I literally just bought you some treats!!";
         nextButton.SetActive(true);
     }
     public void Choice2bFunct(){

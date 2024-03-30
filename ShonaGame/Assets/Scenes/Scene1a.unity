@@ -1312,7 +1312,7 @@ MonoBehaviour:
   nextButton: {fileID: 4209056869450506170}
   nextScene: {fileID: 589687793}
   playerName: 
-  gameHandler: {fileID: 0}
+  gameHandler: {fileID: 4037419739540218815}
 --- !u!1 &1262666378
 GameObject:
   m_ObjectHideFlags: 0

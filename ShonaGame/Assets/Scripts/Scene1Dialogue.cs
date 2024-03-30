@@ -36,6 +36,8 @@ public class Scene1Dialogue : MonoBehaviour {
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
 void Start(){  
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -64,7 +66,7 @@ public void Next(){
         else if (primeInt == 2){
                 ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Felix! Felix! Guess what?! ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -82,7 +84,7 @@ public void Next(){
        else if (primeInt == 4){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "No not that! Our guardian and I are going to the dog park! ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -98,7 +100,7 @@ public void Next(){
        else if (primeInt == 6){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Huh? What are you talking about? ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -114,7 +116,7 @@ public void Next(){
        else if (primeInt == 8){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text =  "What? That’s not true! ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -130,7 +132,7 @@ public void Next(){
         else if (primeInt == 10){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text =  "Oh… I guess you’re right. But today I’m gonna make it to the park! Nothing will get in my way! ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -146,7 +148,7 @@ public void Next(){
         else if (primeInt == 12){
                 ArtChar1a.SetActive(true);
                 ArtChar2a.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Wait do you smell that… it smells like… a used paper towel!! I see it, it’s on the floor in the kitchen! ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -163,7 +165,7 @@ public void Next(){
         else if (primeInt == 14){
                 ArtChar1a.SetActive(true);
                 ArtChar2b.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "…Maybe… ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -196,12 +198,12 @@ public void Next(){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char3name.text = "Guardian";
-                Char3speech.text = "OK, [dog]! What color collar do you want to wear today? ";
+                Char3speech.text = "OK, " + playerName + "! What color collar do you want to wear today? ";
         }
        else if (primeInt == 21){
                 ArtChar1a.SetActive(true);
                 ArtChar3.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Ooh! Felix, what color collar should I choose? ";
                 Char3name.text = "";
                 Char3speech.text = "";
@@ -235,7 +237,7 @@ public void Next(){
         else if (primeInt == 31){
                 ArtChar1b.SetActive(true);
                 ArtChar3.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Alright Felix, we’re off to the park! ";
                 Char3name.text = "";
                 Char3speech.text = "";
@@ -261,7 +263,7 @@ public void Next(){
         else if (primeInt == 37){
                 ArtChar1c.SetActive(true);
                 ArtChar3.SetActive(false);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Alright Felix, we’re off to the park! ";
                 Char3name.text = "";
                 Char3speech.text = "";
@@ -286,7 +288,7 @@ public void Next(){
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and SceneChanges)
         public void Choice1bFunct(){
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Oh yuck it was used to clean ketchup! I hate ketchup. ";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -305,7 +307,7 @@ public void Next(){
                 Collar2.SetActive(false);
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Lookin’ pretty good if I do say so myself! ";
                 primeInt = 29;
                 Choice2a.SetActive(false);
@@ -322,7 +324,7 @@ public void Next(){
                 Collar2.SetActive(false);
                 Char2name.text = "";
                 Char2speech.text = "";
-                Char1name.text = "YOU";
+                Char1name.text = playerName;
                 Char1speech.text = "Lookin’ pretty good if I do say so myself! ";
                 primeInt = 35;
                 Choice2a.SetActive(false);

@@ -26,9 +26,13 @@ public class Scene1bDialogue : MonoBehaviour
         public GameObject Choice1b;
         public GameObject nextButton;
         public GameObject nextScene;
+        public string playerName;
+        public GameHandler gameHandler;
     // Start is called before the first frame update
     void Start()
     {
+        string pNameTemp = gameHandler.GetName();
+        playerName = pNameTemp;
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
@@ -54,7 +58,7 @@ public class Scene1bDialogue : MonoBehaviour
         {
             DialogueDisplay.SetActive(true);
             ArtChar1a.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = " Oooohhh… it smells reeeeaaally good.";
             Char2name.text = "";
             Char2speech.text = "";
@@ -67,12 +71,12 @@ public class Scene1bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "Felix";
-            Char2speech.text = "Think this through, [dog].";
+            Char2speech.text = "Think this through, " + playerName + ".";
         }
         else if (primeInt == 3){
             ArtChar1a.SetActive(true);
             ArtChar2b.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Maybe our guardian won’t mind if I just taste it?";
             Char2name.text = "";
             Char2speech.text = "";
@@ -88,7 +92,7 @@ public class Scene1bDialogue : MonoBehaviour
         else if (primeInt == 5){
             ArtChar1a.SetActive(true);
             ArtChar2a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Maybe just a lick. A lick and a sniff. A lick, a sniff and a “CHOMP”";
             Char2name.text = "";
             Char2speech.text = "";
@@ -99,7 +103,7 @@ public class Scene1bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "[Dog] what are you doing! Drop that!";
+            Char3speech.text = playerName + " what are you doing! Drop that!";
         }
         else if (primeInt == 7){
             ArtChar3b.SetActive(false);
@@ -112,7 +116,7 @@ public class Scene1bDialogue : MonoBehaviour
         else if (primeInt == 8){
             ArtChar1a.SetActive(true);
             ArtChar2b.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "*muffled* Muh Mo";
             Char2name.text = "";
             Char2speech.text = "";
@@ -123,7 +127,7 @@ public class Scene1bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "[Dog], drop that right now!";
+            Char3speech.text = playerName + ", drop that right now!";
         }
         else if (primeInt == 10){
             ArtChar1a.SetActive(true);
@@ -136,7 +140,7 @@ public class Scene1bDialogue : MonoBehaviour
         else if (primeInt == 16){
             ArtChar3a.SetActive(false);
             ArtChar1a.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I AM a good dog. Does that mean I can eat the towel now?";
             Char3name.text = "";
             Char3speech.text = "";
@@ -152,7 +156,7 @@ public class Scene1bDialogue : MonoBehaviour
         else if (primeInt == 18){
             ArtChar1a.SetActive(true);
             ArtChar3a.SetActive(false);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "Yes please!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -171,7 +175,7 @@ public class Scene1bDialogue : MonoBehaviour
         else if (primeInt == 26){
             ArtChar3b.SetActive(false);
             ArtChar1a.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "But itch ish sho yummy!";
             Char3name.text = "";
             Char3speech.text = "";
@@ -187,7 +191,7 @@ public class Scene1bDialogue : MonoBehaviour
         else if (primeInt == 28){
             ArtChar3a.SetActive(false);
             ArtChar1b.SetActive(true);
-            Char1name.text = "YOU";
+            Char1name.text = playerName;
             Char1speech.text = "I’m sorry. I will be a good dog.";
             Char3name.text = "";
             Char3speech.text = "";
@@ -207,7 +211,7 @@ public class Scene1bDialogue : MonoBehaviour
         ArtChar1a.SetActive(false);
         DialogueDisplay.SetActive(true);
         ArtChar3a.SetActive(true);
-        Char3speech.text = "Good dog, [Dog].";
+        Char3speech.text = "Good dog, " + playerName + ".";
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         primeInt = 15;
@@ -221,7 +225,7 @@ public class Scene1bDialogue : MonoBehaviour
         GameHandler.patience -= 1;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
-        Char3speech.text = "Give me that, [Dog]!";
+        Char3speech.text = "Give me that, " + playerName + "!";
         primeInt = 25;
         nextButton.SetActive(true);
     }

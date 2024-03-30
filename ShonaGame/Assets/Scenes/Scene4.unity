@@ -701,7 +701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 701328194092080352, guid: 51780b7ac47f2466a911f741b58957ae, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 701328194092080352, guid: 51780b7ac47f2466a911f741b58957ae, type: 3}
       propertyPath: m_AnchorMax.x
@@ -916,7 +916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6637615653833542805, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6637615653833542805, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1561,6 +1561,8 @@ MonoBehaviour:
   Choice2b: {fileID: 159420176}
   nextButton: {fileID: 869073454}
   nextScene1: {fileID: 324640275}
+  playerName: 
+  gameHandler: {fileID: 4037419739540218815}
 --- !u!1 &1323339729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2364,7 +2366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 47999891517990179, guid: ed14270500393410f85beec6980b1bd5, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 47999891517990179, guid: ed14270500393410f85beec6980b1bd5, type: 3}
       propertyPath: m_AnchorMax.x
