@@ -718,6 +718,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1223801168}
     - target: {fileID: 4571852104898620341, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571852104898620341, guid: 885a3f5cf081e4c389d2a00f44712c48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SceneChange
       objectReference: {fileID: 0}

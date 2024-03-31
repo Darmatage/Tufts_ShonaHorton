@@ -142,6 +142,9 @@ public class Scene2Dialogue : MonoBehaviour
             Char1speech.text = "{Ooo a fire hydrant… I kind of want to pee on it… oh but I don’t wanna be stereotypical… but it would be fun…}";
             Char2name.text = "";
             Char2speech.text = "";
+        }
+        else if (primeInt == 7){
+            DialogueDisplay.SetActive(false);
             nextButton.SetActive(false);
             Choice1a.SetActive(true);
             Choice1b.SetActive(true);
@@ -409,6 +412,7 @@ public class Scene2Dialogue : MonoBehaviour
     }
     public void Choice1aFunct(){
         GameHandler.patience -= 0.5;
+        DialogueDisplay.SetActive(true);
         ArtChar1.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -421,6 +425,7 @@ public class Scene2Dialogue : MonoBehaviour
         nextButton.SetActive(true);
     }
     public void Choice1bFunct(){
+        DialogueDisplay.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         Char1speech.text = "Dog: Nah, I don’t wanna be cliche.";
@@ -429,6 +434,7 @@ public class Scene2Dialogue : MonoBehaviour
     }
     public void Choice2aFunct(){
         ArtChar1Lose.SetActive(false);
+        ArtChar4b.SetActive(false);
         ArtChar4a.SetActive(true);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);

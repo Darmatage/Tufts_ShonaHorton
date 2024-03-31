@@ -8,6 +8,7 @@ public class NameTransfer : MonoBehaviour {
         public string theName;
         public GameObject inputField;
         public GameObject textDisplay;
+        public GameObject textDisplayBG;
         public GameHandler gameHandler;
         public GameObject welcomeDisplay;
 
@@ -20,6 +21,7 @@ public class NameTransfer : MonoBehaviour {
                 theName = inputField.GetComponentInChildren<Text>().text;
                 Debug.Log("player name is " + theName);
                 textDisplay.GetComponent<Text>().text = "Welcome, " + theName + ", to the game.";
+                textDisplayBG.GetComponent<Text>().text = "Welcome, " + theName + ", to the game.";
                 welcomeDisplay.SetActive(true);
                 gameHandler.UpdateName(theName);
                 Debug.Log("player name is " + theName);
