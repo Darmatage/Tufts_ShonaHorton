@@ -74,11 +74,11 @@ public class Scene4Dialogue : MonoBehaviour
                 ArtChar1Lose = ArtCharLose1a;
             }
             else{
-                ArtChar1 = ArtCharLose1c;
+                ArtChar1Lose = ArtCharLose1c;
             }
         }
         else{
-            ArtChar1 = ArtCharLose1b;
+            ArtChar1Lose = ArtCharLose1b;
         }
         ArtChar1.SetActive(false);
         ArtChar1Lose.SetActive(false);

@@ -356,8 +356,8 @@ public class Scene2Dialogue : MonoBehaviour
             Char4speech.text = "";
         }
         else if (primeInt == 71){
-            ArtChar1.SetActive(true);
-            ArtChar4a.SetActive(false);
+            ArtChar1.SetActive(false);
+            ArtChar4a.SetActive(true);
             Char1name.text = "";
             Char1speech.text = "";
             Char4name.text = "Ollie";
@@ -449,6 +449,7 @@ public class Scene2Dialogue : MonoBehaviour
 
     public void Choice2bFunct(){
         ArtChar1Lose.SetActive(false);
+        ArtChar4b.SetActive(false);
         ArtChar3b.SetActive(true);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
