@@ -219,7 +219,7 @@ public class Scene5bDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            if (GameHandler.patience <= -4)
+            if (GameHandler.patience <= 0)
             {
                 Char3speech.text = "What has gotten into you today, " + playerName + "? I think we should just go home until you behave.";
                 nextButton.SetActive(false);
@@ -233,8 +233,8 @@ public class Scene5bDialogue : MonoBehaviour
         else if (primeInt == 25){
             ArtChar1.SetActive(true);
             ArtChar3b.SetActive(false);
-            Char1name.text = "Ooo yea! Let's go!!";
-            Char1speech.text = "";
+            Char1name.text = playerName;
+            Char1speech.text = "Ooo yea! Let's go!!";
             Char3name.text = "";
             Char3speech.text = "";
             nextButton.SetActive(false);

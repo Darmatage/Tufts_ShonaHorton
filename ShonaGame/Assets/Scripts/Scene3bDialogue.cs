@@ -274,14 +274,14 @@ public class Scene3bDialogue : MonoBehaviour
             Char3name.text = "Guardian";
             Char3speech.text = "I’ll go tell someone so this can get cleaned up, and then we’re leaving immediately. Oh my gosh this is so embarrassing!";
             nextButton.SetActive(false);
-            if (GameHandler.patience <= -4){
+            if (GameHandler.patience <= 0){
                 nextSceneLose.SetActive(true);
             }
             else {
                 nextScene.SetActive(true);
             }
         }
-        else if (primeInt == 30){
+        else if (primeInt == 31){
             ArtChar3a.SetActive(false);
             ArtChar1.SetActive(true);
             ArtBG3.SetActive(false);

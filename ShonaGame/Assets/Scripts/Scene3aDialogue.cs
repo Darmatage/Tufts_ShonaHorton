@@ -216,7 +216,7 @@ public class Scene3aDialogue : MonoBehaviour
             Char3name.text = "Guardian";
             Char3speech.text = "Ugh I can’t believe you! Let’s get out of here before you embarrass me anymore than you already have!";
             nextButton.SetActive(false);
-            if (GameHandler.patience <= -4){
+            if (GameHandler.patience <= 0){
                 nextSceneLose.SetActive(true);
             }
             else {

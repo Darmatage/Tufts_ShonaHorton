@@ -202,7 +202,7 @@ public class Scene5aDialogue : MonoBehaviour
             Char1name.text = "";
             Char1speech.text = "";
             Char3name.text = "Guardian";
-            if (GameHandler.patience <= -4)
+            if (GameHandler.patience <= 0)
             {
                 Char3speech.text = "That's it, " + playerName + "! When I catch you we are going straight home!";
                 nextButton.SetActive(false);
