@@ -166,7 +166,7 @@ public void Next(){
                 ArtChar1a.SetActive(true);
                 ArtChar2b.SetActive(false);
                 Char1name.text = playerName;
-                Char1speech.text = "…Maybe… ";
+                Char1speech.text = " …Maybe… ";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
