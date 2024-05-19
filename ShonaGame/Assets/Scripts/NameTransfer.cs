@@ -12,18 +12,25 @@ public class NameTransfer : MonoBehaviour {
         public GameHandler gameHandler;
         public GameObject welcomeDisplay;
 
+
         void Start () {
-                welcomeDisplay.SetActive(false);
+                if (GameHandler.playerName == "YOU"){
+                        welcomeDisplay.SetActive(false);
+                } else {
+                        DisplayName(GameHandler.playerName);
+                }
                 Debug.Log(inputField.GetComponent<Text>());
         }
 
         public void StoreName(){
                 theName = inputField.GetComponentInChildren<Text>().text;
-                Debug.Log("player name is " + theName);
+                gameHandler.UpdateName(theName);
+                DisplayName(theName);
+        }
+
+        public void DisplayName(string theName){
                 textDisplay.GetComponent<Text>().text = "Welcome, " + theName + ", to the game.";
                 textDisplayBG.GetComponent<Text>().text = "Welcome, " + theName + ", to the game.";
                 welcomeDisplay.SetActive(true);
-                gameHandler.UpdateName(theName);
-                Debug.Log("player name is " + theName);
         }
 }
