@@ -171,7 +171,7 @@ public class Scene4Dialogue : MonoBehaviour
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "Guardian";
-            Char3speech.text = "Ok, " + playerName + " do you want to go down our usual path? Or do you want to go down this way, I think I hear music coming from there.";
+            Char3speech.text = "OK, " + playerName + " do you want to go down our usual path? Or do you want to go down this way, I think I hear music coming from there.";
         }
         else if (primeInt == 14){
             DialogueDisplay.SetActive(false);

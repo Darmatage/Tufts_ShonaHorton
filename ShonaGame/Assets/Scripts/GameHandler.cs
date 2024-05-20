@@ -12,6 +12,7 @@ public class GameHandler : MonoBehaviour{
         public static double patience = 3;
         public static int nice = 0;
         public static string playerName = "YOU";
+        
 
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;

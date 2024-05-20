@@ -232,7 +232,7 @@ public class Scene2Dialogue : MonoBehaviour
             ArtChar1.SetActive(true);
             ArtChar4a.SetActive(false);
             Char1name.text = playerName;
-            Char1speech.text = "Oh… ok… what kind of accident!";
+            Char1speech.text = "Oh… OK… what kind of accident!";
             Char4name.text = "";
             Char4speech.text = "";
         }
@@ -304,7 +304,7 @@ public class Scene2Dialogue : MonoBehaviour
             ArtChar1.SetActive(true);
             ArtChar4a.SetActive(false);
             Char1name.text = playerName;
-            Char1speech.text = "Oh… ok… what kind of accident!";
+            Char1speech.text = "Oh… OK… what kind of accident!";
             Char4name.text = "";
             Char4speech.text = "";
         }
@@ -324,6 +324,14 @@ public class Scene2Dialogue : MonoBehaviour
             nextButton.SetActive(false);
             Choice2a.SetActive(true);
             Choice2b.SetActive(true);
+        }
+        else if (primeInt == 65){
+            ArtChar1.SetActive(false);
+            ArtChar4a.SetActive(true);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char4name.text = "New Dog";
+            Char4speech.text = "Sorry, sorry. I didn’t mean to be so aggressive, it’s still a sensitive subject. I’m a little embarrassed…";
         }
         else if (primeInt == 66){
             Char4speech.text = "But uh....";
@@ -428,22 +436,22 @@ public class Scene2Dialogue : MonoBehaviour
         DialogueDisplay.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
-        Char1speech.text = "Dog: Nah, I don’t wanna be cliche.";
+        Char1speech.text = "Nah, I don’t wanna be cliche.";
         primeInt = 50;
         nextButton.SetActive(true);
     }
     public void Choice2aFunct(){
         ArtChar1Lose.SetActive(false);
         ArtChar4b.SetActive(false);
-        ArtChar4a.SetActive(true);
+        ArtChar1.SetActive(true);
         Choice2a.SetActive(false);
         Choice2b.SetActive(false);
-        Char1name.text = "";
-        Char1speech.text = "";
-        Char4name.text = "New Dog";
-        Char4speech.text = "Sorry, sorry. I didn’t mean to be so aggressive, it’s still a sensitive subject. I’m a little embarrassed…";
+        Char1name.text = playerName;
+        Char1speech.text = "Woah, buddy, it's OK! I just wanted to know what brought you to the neighborhood. ";
+        Char4name.text = "";
+        Char4speech.text = "";
         GameHandler.nice = 1;
-        primeInt = 65;
+        primeInt = 64;
         nextButton.SetActive(true);
     }
 

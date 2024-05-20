@@ -218,7 +218,7 @@ public class Scene3bDialogue : MonoBehaviour
             ArtChar1.SetActive(true);
             ArtChar2a.SetActive(false);
             Char1name.text = playerName;
-            Char1speech.text = "Ok, see you around Bosco!";
+            Char1speech.text = "OK, see you around Bosco!";
             Char2name.text = "";
             Char2speech.text = "";
         }
@@ -290,6 +290,14 @@ public class Scene3bDialogue : MonoBehaviour
             Char1speech.text = "Oh thank goodness, that was close! I just barely made it outside. But I can see the park! I made it!";
             Char3name.text = "";
             Char3speech.text = "";
+        }
+        else if (primeInt == 32){
+            ArtChar3a.SetActive(true);
+            ArtChar1.SetActive(false);
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Guardian";
+            Char3speech.text = "Woah, buddy, you really had to go! Well, I'm glad you made it outside, now we can head to the park!";
             nextButton.SetActive(false);
             nextScene.SetActive(true);
         }
@@ -315,7 +323,7 @@ public class Scene3bDialogue : MonoBehaviour
         Char1name.text = "";
         Char1speech.text = "";
         Char3name.text = "Guardian";
-        Char3speech.text = "Ok, all set in here! Let's go, " + playerName + ".";
+        Char3speech.text = "OK, all set in here! Let's go, " + playerName + ".";
         primeInt = 30;
         nextButton.SetActive(true);
     }
