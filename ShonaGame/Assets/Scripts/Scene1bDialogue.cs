@@ -221,7 +221,7 @@ public class Scene1bDialogue : MonoBehaviour
         ArtChar1a.SetActive(false);
         ArtChar3b.SetActive(true);
         DialogueDisplay.SetActive(true);
-        GameHandler.ateTowel = 1;
+        GameHandler.ateTowel += 1;
         GameHandler.patience -= 1;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);

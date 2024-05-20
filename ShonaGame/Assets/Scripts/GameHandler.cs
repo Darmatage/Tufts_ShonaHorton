@@ -59,6 +59,10 @@ public class GameHandler : MonoBehaviour{
         }
 
         public void StartGame(){
+                collarColor = 0;
+                ateTowel = 0;
+                patience = 3;
+                nice = 0;
                 SceneManager.LoadScene("Scene1a");
         }
 

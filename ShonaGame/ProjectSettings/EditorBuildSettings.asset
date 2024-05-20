@@ -44,12 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene6b.unity
     guid: bd9a7165277454ea4a11f52f6813f57d
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/SceneLose.unity
     guid: 15934ca09e9ae449dadb2a64f749fdfe

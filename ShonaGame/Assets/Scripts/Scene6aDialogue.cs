@@ -363,6 +363,8 @@ public class Scene6aDialogue : MonoBehaviour
             }
     }
     public void Choice2aFunct(){
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
         ArtChar1.SetActive(false);
         ArtChar2a.SetActive(true);
         DialogueDisplay.SetActive(true);
@@ -374,6 +376,8 @@ public class Scene6aDialogue : MonoBehaviour
         primeInt = 49;
     }
     public void Choice2bFunct(){
+        Choice2a.SetActive(false);
+        Choice2b.SetActive(false);
         DialogueDisplay.SetActive(true);
         Char1speech.text = "Come on Ollie, we can play together!";
         nextButton.SetActive(true);
